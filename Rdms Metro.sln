@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "RdmsMetro", "RdmsMetro\RdmsMetro.vbproj", "{DD154111-1DAC-4104-80B4-75E50463FF40}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "NasLib", "NasLib\NasLib.vbproj", "{77B5B2E1-5538-44ED-9639-CF8BFD17A5D9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug On Server|Any CPU = Debug On Server|Any CPU
+		Debug On Server|x86 = Debug On Server|x86
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD154111-1DAC-4104-80B4-75E50463FF40}.Debug On Server|Any CPU.ActiveCfg = Debug On Server|Any CPU
+		{DD154111-1DAC-4104-80B4-75E50463FF40}.Debug On Server|Any CPU.Build.0 = Debug On Server|Any CPU
+		{DD154111-1DAC-4104-80B4-75E50463FF40}.Debug On Server|x86.ActiveCfg = Debug On Server|x86
+		{DD154111-1DAC-4104-80B4-75E50463FF40}.Debug On Server|x86.Build.0 = Debug On Server|x86
+		{DD154111-1DAC-4104-80B4-75E50463FF40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD154111-1DAC-4104-80B4-75E50463FF40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD154111-1DAC-4104-80B4-75E50463FF40}.Debug|x86.ActiveCfg = Debug|x86
+		{DD154111-1DAC-4104-80B4-75E50463FF40}.Debug|x86.Build.0 = Debug|x86
+		{DD154111-1DAC-4104-80B4-75E50463FF40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD154111-1DAC-4104-80B4-75E50463FF40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD154111-1DAC-4104-80B4-75E50463FF40}.Release|x86.ActiveCfg = Release|x86
+		{DD154111-1DAC-4104-80B4-75E50463FF40}.Release|x86.Build.0 = Release|x86
+		{77B5B2E1-5538-44ED-9639-CF8BFD17A5D9}.Debug On Server|Any CPU.ActiveCfg = Debug On Server|Any CPU
+		{77B5B2E1-5538-44ED-9639-CF8BFD17A5D9}.Debug On Server|Any CPU.Build.0 = Debug On Server|Any CPU
+		{77B5B2E1-5538-44ED-9639-CF8BFD17A5D9}.Debug On Server|x86.ActiveCfg = Debug On Server|x86
+		{77B5B2E1-5538-44ED-9639-CF8BFD17A5D9}.Debug On Server|x86.Build.0 = Debug On Server|x86
+		{77B5B2E1-5538-44ED-9639-CF8BFD17A5D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77B5B2E1-5538-44ED-9639-CF8BFD17A5D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77B5B2E1-5538-44ED-9639-CF8BFD17A5D9}.Debug|x86.ActiveCfg = Debug|x86
+		{77B5B2E1-5538-44ED-9639-CF8BFD17A5D9}.Debug|x86.Build.0 = Debug|x86
+		{77B5B2E1-5538-44ED-9639-CF8BFD17A5D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77B5B2E1-5538-44ED-9639-CF8BFD17A5D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77B5B2E1-5538-44ED-9639-CF8BFD17A5D9}.Release|x86.ActiveCfg = Release|x86
+		{77B5B2E1-5538-44ED-9639-CF8BFD17A5D9}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {802FDF7B-F8D1-4EF2-B845-CE4AC4B3538E}
+		VisualSVNWorkingCopyRoot = .
+	EndGlobalSection
+EndGlobal

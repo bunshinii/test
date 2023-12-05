@@ -1,0 +1,14 @@
+﻿.main {
+  padding: 50px;
+  border: 1px solid lightgray;
+  min-height: 700px;
+}
+.main .legend {
+  text-align: center;
+  font-weight: bold;
+  padding: 5px;
+  margin: 5px;
+  float: left;
+  width: 200px;
+  border: 1px solid lightgray;
+}

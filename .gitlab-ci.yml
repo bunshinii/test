@@ -1,0 +1,77 @@
+  # To Publish this project into production site
+  # please put 
+  #     "PUBLISH_TYPE" in [Input variable key] field and 
+  #     "release" in [Input variable value] field.
+  # on run pipeline page: https://git.uitm.edu.my/library/rdms/-/pipelines/new
+  
+  # ALL THE VARIABLE COMMENTED BELOW ALREADY SET ON RUNNER
+  #    $env:NUGET_PATH
+  #    $env:MSBUILD_PATH
+  #    $env:MSBUILD_EXE
+
+variables:
+  PROJECT_FILE: .\RdmsMetro\RdmsMetro.vbproj
+
+  # PUBLISH_TYPE is set to publish the project to specified server folder.
+  #   values :
+  #     release - will publish into rdms folder
+  #     debug   - will publish into debug32 folder
+  PUBLISH_TYPE: "debug"
+
+  # if you have git submodules in your project.
+  GIT_SUBMODULE_STRATEGY: recursive
+  
+#####################################
+#    STAGES
+#####################################
+stages:
+  - build
+  - publish
+
+#####################################
+#    BUILD
+#####################################
+debug_build:
+  stage: build
+  rules:
+    - if: '$PUBLISH_TYPE == "debug"'
+  script:
+    - echo "Building debug project"
+    - '& "$env:NUGET_PATH" restore -MSBuildPath "$env:MSBUILD_PATH"' 
+    - '& "$env:MSBUILD_PATH$env:MSBUILD_EXE" "$env:PROJECT_FILE" /p:Configuration=Debug /p:Platform=x86 /clp:ErrorsOnly'
+
+release_build:
+  stage: build
+  rules:
+    - if: '$PUBLISH_TYPE == "release"'
+      when: manual
+  script:
+    - echo "Building release project"
+    - '& "$env:NUGET_PATH" restore -MSBuildPath "$env:MSBUILD_PATH"' 
+    - '& "$env:MSBUILD_PATH$env:MSBUILD_EXE" "$env:PROJECT_FILE" /p:Configuration=Release /p:Platform=x86 /clp:ErrorsOnly'
+
+#####################################
+#    PUBLISH
+#####################################
+debug_publish:
+  stage: publish
+  rules:
+    - if: '$PUBLISH_TYPE == "debug"'
+  script:
+    - echo "Publishing debug project"
+    - '& "$env:NUGET_PATH" restore -MSBuildPath "$env:MSBUILD_PATH"' 
+    - '& "$env:MSBUILD_PATH$env:MSBUILD_EXE" "$env:PROJECT_FILE" /p:Configuration=Debug /p:Platform=x86 /clp:ErrorsOnly /p:DeployOnBuild=true /p:PublishProfile="D_WebApps_Debug"'
+  dependencies:
+    - debug_build
+
+release_publish:
+  stage: publish
+  rules:
+    - if: '$PUBLISH_TYPE == "release"'
+      #when: manual
+  script:
+    - echo "Publishing release project"
+    - '& "$env:NUGET_PATH" restore -MSBuildPath "$env:MSBUILD_PATH"' 
+    - - '& "$env:MSBUILD_PATH$env:MSBUILD_EXE" "$env:PROJECT_FILE" /p:Configuration=Release /p:Platform=x86 /clp:ErrorsOnly /p:DeployOnBuild=true /p:PublishProfile="D_WebApps_Rdms"'
+  dependencies:
+    - release_build

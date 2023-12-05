@@ -1,0 +1,113 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Blank.master.vb" Inherits="Rdms_Metro.Blank" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<%@ Register Src="~/MyControls/MetroUI/Header.ascx" TagPrefix="nas" TagName="Header" %>
+<%@ Register Src="~/MyControls/MetroUI/Footer.ascx" TagPrefix="nas" TagName="Footer" %>
+<%@ Register Src="~/MyControls/Rdms/LeftCharm/Container.ascx" TagPrefix="nas" TagName="LeftCharm" %>
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="product" content="RDMS" />
+    <meta name="description" content="Reference Desk Management System" />
+    <meta name="author" content="Muhamad Nasrul Hussain, naspenang, nash, nashamaya" />
+
+    <!-- Load JavaScript Libraries -->
+    <link href="<%# ResolveUrl("~/Content/themes/metro/css/metro-bootstrap.css")%>" rel="stylesheet" />
+    <link href="<%# ResolveUrl("~/Content/themes/metro/css/metro-bootstrap-responsive.css")%>" rel="stylesheet" />
+    <link href="<%# ResolveUrl("~/Content/themes/metro/css/iconFont.css")%>" rel="stylesheet" />
+    <link href="<%# ResolveUrl("~/Content/themes/metro/css/docs.css")%>" rel="stylesheet" />
+    <link href="<%# ResolveUrl("~/Content/themes/metro/js/prettify/prettify.css")%>" rel="stylesheet" />
+    
+    <!-- Load JavaScript Libraries -->
+    <script src="<%# ResolveUrl("~/Content/themes/metro/js/jquery/jquery.min.js")%>")%>"></script>
+    <script src="<%# ResolveUrl("~/Content/themes/metro/js/jquery/jquery.mousewheel.js")%>"></script>
+    <script src="<%# ResolveUrl("~/Content/themes/metro/js/jquery/jquery.widget.min.js")%>"></script>
+    <script src="<%# ResolveUrl("~/Content/themes/metro/js/prettify/prettify.js")%>"></script>
+
+    <!-- Metro UI CSS JavaScript plugins -->
+    <script src="<%# ResolveUrl("~/Content/themes/metro/js/load-metro.js")%>"></script>
+    <script src="<%# ResolveUrl("~/Content/themes/metro/js/metro.min.js")%>"></script>
+
+
+    <!-- Local JavaScript -->
+    <script src="<%# ResolveUrl("~/Content/themes/metro/js/docs.js")%>"></script>
+    <script src="<%# ResolveUrl("~/Content/themes/metro/js/github.info.js")%>"></script>
+
+    <link href="<%# ResolveUrl("~/Content/themes/metro/css/my_custom-color.min.css")%>" rel="stylesheet" />
+    <link href="<%# ResolveUrl("~/Content/mymetro.min.css")%>" rel="stylesheet" />
+    <link href="<%# ResolveUrl("~/Content/NoPrint.min.css")%>" rel="stylesheet" media="print" />
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/rdms/Images/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="/rdms/Images/apple-touch-icon-57x57.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="/rdms/Images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="60x60" href="/rdms/Images/apple-touch-icon-60x60.png"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="/rdms/Images/apple-touch-icon-76x76.png"/>
+    <link rel="icon" type="image/png" href="/rdms/Images/favicon-16x16.png" sizes="16x16"/>
+    <link rel="icon" type="image/png" href="/rdms/Images/favicon-32x32.png" sizes="32x32"/>
+    <meta name="msapplication-TileColor" content="#da532c"/>
+    <meta name="msapplication-config" content="/rdms/Images/browserconfig.xml"/>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/rdms/Images/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="/rdms/Images/apple-touch-icon-57x57.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="/rdms/Images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="60x60" href="/rdms/Images/apple-touch-icon-60x60.png"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="/rdms/Images/apple-touch-icon-76x76.png"/>
+    <link rel="icon" type="image/png" href="/rdms/Images/favicon-16x16.png" sizes="16x16"/>
+    <link rel="icon" type="image/png" href="/rdms/Images/favicon-32x32.png" sizes="32x32"/>
+    <meta name="msapplication-TileColor" content="#da532c"/>
+    <meta name="msapplication-config" content="/rdms/Images/browserconfig.xml"/>
+
+    <title>Reference Desk Management System</title>
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+    
+</head>
+<body>
+
+    <form id="form1" runat="server" class="metro">
+        <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server"></asp:ToolkitScriptManager>
+    <div>
+
+
+        <table class="mymetro">
+            <tr>
+                
+                <td class="workspace">
+                    <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+                    <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+                </td>
+            </tr>
+            
+        </table>
+        
+    </div>
+        <asp:UpdateProgress ID="UpdateProgress1" runat="server">
+            <ProgressTemplate>
+                <div class="outerLayer">
+                    <div class="innerLayer">
+                        <asp:Image ID="Image2" runat="server" ImageUrl="~/Images/loading.gif" Height="21px" Width="21px" /> LOADING..
+                    </div>
+                </div>
+            </ProgressTemplate>
+        </asp:UpdateProgress>
+
+        <asp:Panel ID="PanelProgress" runat="server" Visible="false">
+            <div class="outerLayer">
+                <div class="innerLayer">
+                    <asp:Image ID="Image3" runat="server" ImageUrl="~/Images/loading.gif" Height="21px" Width="21px" /> LOADING..
+                </div>
+            </div>
+        </asp:Panel>
+
+    </form>
+</body>
+</html>

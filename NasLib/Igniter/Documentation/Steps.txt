@@ -1,0 +1,7 @@
+﻿=============================================
+	Naslib.dll - Using this library guide
+=============================================
+
+Note:
+This library section "Igniter" was built to work on template "MetroUiCss3".
+Build a web application, copy "MetroUiCss3" template into applocation folder then set reference to this "naslib" library.

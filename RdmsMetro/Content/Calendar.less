@@ -1,0 +1,136 @@
+﻿//#region Variables
+@dayColor:#285395;
+@itemHeaderColor:@dayColor;
+@itemBackgroundColor:rgba(142, 174, 223, 0.50);
+//#endregion
+
+.mycalendar {
+
+    table {
+        table-layout:fixed;
+        
+    }
+
+    h1 {
+        font-weight:bold;
+        color:@dayColor;
+    }
+
+    .monthly {
+        width:100%;
+
+        .header {
+            font-size:16pt;
+            font-weight:bold;
+            color:@itemHeaderColor;
+            text-align:center;
+        }
+
+        td {
+            width:10%;
+            padding:0;
+        }
+
+        .sun, .sat {
+            background-color:rgb(235, 243, 255);
+        }
+
+        .content {
+            overflow:hidden;
+
+            &:hover {
+                background-color:ActiveCaption;
+                
+            }
+
+            .today {
+                background-color:gold;
+            }
+        }
+        
+        
+
+    }
+
+    .legend {
+        width:100%;
+
+        .legendItem {
+            float:left;
+            margin:5px;
+            padding:5px 10px;
+            border:2px solid transparent;
+
+            &:hover{
+                border:2px solid gray;
+            }
+        }
+    }
+    
+    
+}
+
+
+.item {
+    //width:98%;
+    padding: 0;
+    margin: 5px;
+
+    td {
+        border-width: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    .itemHeader {
+        padding: 2px 10px !important;
+        color: white;
+        background-color: @dayColor;
+        font-weight: bold;
+
+        .btnGo {
+            float:right;
+            padding:0 5px;
+            margin-right:-10px;
+
+            a { 
+                color:white;
+
+            }
+
+            &:hover {
+                background-color:darkcyan;
+                
+            }
+        }
+    }
+
+    .itemContentOuter {
+        padding: 10px !important;
+        background-color: @itemBackgroundColor;
+        overflow-y:auto;
+        overflow-x:visible;
+    }
+
+    .itemContent {
+        
+        height: 100px;
+        vertical-align: top;
+
+        .staffname:hover, .staffname a:hover {
+            background-color:darkorchid !important;
+            color:lightyellow !important;
+        }
+    }
+
+    .elipsis {
+        white-space: nowrap;
+        overflow: hidden;
+        -ms-text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+    }
+}
+
+
+

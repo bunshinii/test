@@ -1,1 +1,3 @@
-# test
+# RDMS
+
+Reference Desk Management System

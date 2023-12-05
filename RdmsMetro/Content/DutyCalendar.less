@@ -1,0 +1,102 @@
+﻿//#region Variables
+
+@mainWidth:380px;
+@mainMinHeight:150px;
+@imageWidth:100px;
+
+//#endregion
+
+.duty-staff {
+    width: @mainWidth;
+    padding: 0;
+    margin: 5px;
+    border: 3px solid transparent;
+    float: left;
+
+    &:hover {
+        border: 3px solid lightgray;
+    }
+
+
+    table {
+            margin: 0;
+            width: 100%;
+            min-height: @mainMinHeight;
+            background-color: white;
+            border: 1px solid lightgray;
+            color: black;
+
+            .legend {
+                .dutyheader {
+                    display:inline-block;
+                }
+
+                .dutybutton {
+                    height:25px;
+                    width:25px;
+                    display:inline-block;
+                    float:right;
+
+                    &:hover {
+                        background-color:aliceblue;
+                    }
+                }
+
+                a {
+                    color: lightgray;
+
+                    &:hover {
+                        color:blue;
+                    }
+                }
+
+            }
+        }
+   
+    
+
+    .image {
+        vertical-align: top;
+        width: @imageWidth;
+        align-items: center;
+    }
+
+    img {
+        margin: 10px;
+        @imgWidth_: @imageWidth - 20px;
+
+        width: @imgWidth_;
+        height: @imgWidth_;
+    }
+
+
+
+    .content {
+        vertical-align: top;
+        width: @mainWidth - @imageWidth;
+        padding: 6px 10px 10px 10px;
+        
+        .title {
+            font-weight: bolder;
+            font-size: 14pt;
+        }
+
+        .name {
+            font-weight: bold;
+            font-size: 12pt;
+        }
+
+        .position, .department, .division, .unit, .email, .phone {
+            font-size: 10pt;
+        }
+
+        .truncate {
+            width: @mainWidth - @imageWidth - 20px; //20px is padding reserve
+            white-space: nowrap;
+            overflow: hidden;
+            -ms-text-overflow: ellipsis;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+        }
+    }
+}

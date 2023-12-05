@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{77B5B2E1-5538-44ED-9639-CF8BFD17A5D9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>NasLib</RootNamespace>
+    <AssemblyName>NasLib</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>NasLib.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>NasLib.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug On Server|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug On Server\</OutputPath>
+    <DocumentationFile>NasLib.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>NasLib.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>NasLib.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug On Server|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug On Server\</OutputPath>
+    <DocumentationFile>NasLib.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\MySql.Data.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\MySql.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="NasLib.Data.SQLiteProvider">
+      <HintPath>Libraries\NasLib.Data.SQLiteProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="RssToolkit, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\RssToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.88.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config\Ini\IniFile.vb" />
+    <Compile Include="Config\SQLite\SQLite.vb" />
+    <Compile Include="Config\SQLite\Table\MyConfig.vb" />
+    <Compile Include="Database\Excel\Sql\Execute.vb" />
+    <Compile Include="Database\MySql\CustomProvider\DBLibrary\StafDepartment.vb" />
+    <Compile Include="Database\MySql\CustomProvider\DBLibrary\StafPosition.vb" />
+    <Compile Include="Database\MySql\CustomProvider\DBLibrary\StudProgramLevel.vb" />
+    <Compile Include="Database\MySql\CustomProvider\DBLibrary\StudProgram.vb" />
+    <Compile Include="Database\MySql\CustomProvider\DBLibrary\StudFaculty.vb" />
+    <Compile Include="Database\MySql\CustomProvider\DBLibrary\StudCampus.vb" />
+    <Compile Include="Database\MySql\CustomProvider\DBLibrary\Patron.vb" />
+    <Compile Include="Database\MySql\CustomProvider\DBLibrary\Table\StaffCode.vb" />
+    <Compile Include="Database\MySql\CustomProvider\DBLibrary\Table\LibStaffCode.vb" />
+    <Compile Include="Database\MySql\CustomProvider\DBLibrary\Table\StudPhoto.vb" />
+    <Compile Include="Database\MySql\CustomProvider\DBLibrary\Table\StaffActiv.vb" />
+    <Compile Include="Database\MySql\CustomProvider\DBLibrary\Table\StudActiv.vb" />
+    <Compile Include="Database\MySql\CustomProvider\Patrons\Table\PatInfo.vb" />
+    <Compile Include="Database\MySql\CustomProvider\Patrons\Table\PatTypes.vb" />
+    <Compile Include="Database\MySql\CustomProvider\Patrons\Table\PatStudPrograms.vb" />
+    <Compile Include="Database\MySql\CustomProvider\Patrons\Table\PatStudMode.vb" />
+    <Compile Include="Database\MySql\CustomProvider\Patrons\Table\PatStudLevels.vb" />
+    <Compile Include="Database\MySql\CustomProvider\Patrons\Table\PatStudFaculties.vb" />
+    <Compile Include="Database\MySql\CustomProvider\Patrons\Table\PatStudCampus.vb" />
+    <Compile Include="Database\MySql\CustomProvider\Patrons\Table\PatStafTypes.vb" />
+    <Compile Include="Database\MySql\CustomProvider\Patrons\Table\PatStafPositions.vb" />
+    <Compile Include="Database\MySql\CustomProvider\Patrons\Table\PatStafDepartments.vb" />
+    <Compile Include="Database\MySql\GlobalVar.vb" />
+    <Compile Include="Database\MySql\Logger\FileDownload\DownloadLog.vb" />
+    <Compile Include="Database\MySql\Logger\FileDownload\Indexer.vb" />
+    <Compile Include="Database\MySql\Logger\v1\Table\StatApplications.vb" />
+    <Compile Include="Database\MySql\Logger\v1\Table\StatLog.vb" />
+    <Compile Include="Database\MySql\Logger\v1\Table\StatAdmin.vb" />
+    <Compile Include="Database\MySql\Provider\Imports\DBLibrary.vb" />
+    <Compile Include="Database\MySql\Provider\AltLogin.vb" />
+    <Compile Include="Database\MySql\Provider\Positions.vb" />
+    <Compile Include="Database\MySql\Provider\Branches.vb" />
+    <Compile Include="Database\MySql\Provider\AltProfile.vb" />
+    <Compile Include="Database\MySql\Provider\QuickFunctions\QuickRegistration.vb" />
+    <Compile Include="Database\MySql\Provider\QuickFunctions\UserData.vb" />
+    <Compile Include="Database\MySql\Provider\Satellites.vb" />
+    <Compile Include="Database\MySql\Provider\Departments.vb" />
+    <Compile Include="Database\MySql\Provider\Divisions.vb" />
+    <Compile Include="Database\MySql\Provider\Table\AltUsersProfileTemp.vb" />
+    <Compile Include="Database\MySql\Provider\Table\StafDepartment.vb" />
+    <Compile Include="Database\MySql\Provider\Table\StudMode.vb" />
+    <Compile Include="Database\MySql\Provider\Table\StudProgram.vb" />
+    <Compile Include="Database\MySql\Provider\Table\StudProgramLevel.vb" />
+    <Compile Include="Database\MySql\Provider\Table\StudFaculty.vb" />
+    <Compile Include="Database\MySql\Provider\Table\StudCampus.vb" />
+    <Compile Include="Database\MySql\Provider\Table\AltUsersProfile.vb" />
+    <Compile Include="Database\MySql\Provider\Table\UsersPositionType.vb" />
+    <Compile Include="Database\MySql\Provider\Units.vb" />
+    <Compile Include="Database\MySql\Provider\Profile.vb" />
+    <Compile Include="Database\MySql\Provider\Role.vb" />
+    <Compile Include="Database\MySql\Provider\Table\UsersPositionGrade.vb" />
+    <Compile Include="Database\MySql\SimpleLogin\Login1.vb" />
+    <Compile Include="Database\MySql\SimpleLogin\Table\Admins.vb" />
+    <Compile Include="Database\MySql\SimpleLogin\Table\Users.vb" />
+    <Compile Include="Database\MySql\Sql\CommandString.vb" />
+    <Compile Include="Database\MySql\Sql\Logger.vb" />
+    <Compile Include="Database\SQLite\GlobalVar.vb" />
+    <Compile Include="Database\SQLite\Provider\Branchs.vb" />
+    <Compile Include="Database\SQLite\Provider\Departments.vb" />
+    <Compile Include="Database\SQLite\Provider\Divisions.vb" />
+    <Compile Include="Database\SQLite\Provider\Membership.vb" />
+    <Compile Include="Database\SQLite\Provider\Profile.vb" />
+    <Compile Include="Database\SQLite\Provider\Role.vb" />
+    <Compile Include="Database\SQLite\Provider\Satellites.vb" />
+    <Compile Include="Database\SQLite\Provider\Table\OfficeBranch.vb" />
+    <Compile Include="Database\SQLite\Provider\Table\OfficeDepartment.vb" />
+    <Compile Include="Database\SQLite\Provider\Table\OfficeDivision.vb" />
+    <Compile Include="Database\SQLite\Provider\Table\OfficeSatellite.vb" />
+    <Compile Include="Database\SQLite\Provider\Table\OfficeUnit.vb" />
+    <Compile Include="Database\SQLite\Provider\Table\Profile.vb" />
+    <Compile Include="Database\SQLite\Provider\Table\Users.vb" />
+    <Compile Include="Database\SQLite\Provider\Table\UsersPosition.vb" />
+    <Compile Include="Database\SQLite\Provider\Table\UsersPositionGrade.vb" />
+    <Compile Include="Database\SQLite\Provider\Units.vb" />
+    <Compile Include="Config\Xml\Xml.vb" />
+    <Compile Include="Database\SQLite\Sql\ConnectionString.vb" />
+    <Compile Include="Database\SQLite\Sql\Logger.vb" />
+    <Compile Include="Functions\Array\Insert.vb" />
+    <Compile Include="Functions\Controls\DataTableTo.vb" />
+    <Compile Include="Functions\Controls\DropDowns.vb" />
+    <Compile Include="Functions\DataTable\Column.vb" />
+    <Compile Include="Functions\DataTable\Export.vb" />
+    <Compile Include="Functions\DataTable\Convert .vb" />
+    <Compile Include="Functions\DataTable\Merge.vb" />
+    <Compile Include="Functions\DataTable\Row.vb" />
+    <Compile Include="Functions\Dates\Format.vb" />
+    <Compile Include="Functions\Dates\IsCheck.vb" />
+    <Compile Include="Functions\Dates\Correction.vb" />
+    <Compile Include="Functions\Dates\Convert.vb" />
+    <Compile Include="Functions\Desktop\Process.vb" />
+    <Compile Include="Functions\Desktop\Architecture.vb" />
+    <Compile Include="Functions\Desktop\Registry.vb" />
+    <Compile Include="Functions\Desktop\Taskbar.vb" />
+    <Compile Include="Functions\Files\Cryptography.vb" />
+    <Compile Include="Functions\Files\Delete.vb" />
+    <Compile Include="Functions\Files\Append.vb" />
+    <Compile Include="Functions\Files\_Files.vb" />
+    <Compile Include="Functions\Images\Converter.vb" />
+    <Compile Include="Functions\Images\SaveAs.vb" />
+    <Compile Include="Functions\IpAddress\Validator.vb" />
+    <Compile Include="Functions\Net\IpAddress.vb" />
+    <Compile Include="Functions\Number\Type.vb" />
+    <Compile Include="Functions\Security\Cryptography.vb" />
+    <Compile Include="Functions\Security\Password.vb" />
+    <Compile Include="Functions\String\From.vb" />
+    <Compile Include="Functions\String\RegexCollection.vb" />
+    <Compile Include="Functions\String\Guids.vb" />
+    <Compile Include="Functions\String\Convert .vb" />
+    <Compile Include="Functions\String\Digits.vb" />
+    <Compile Include="Functions\String\Cases.vb" />
+    <Compile Include="Functions\String\Extract.vb" />
+    <Compile Include="Functions\Web\Favicon.vb" />
+    <Compile Include="Functions\Web\Html.vb" />
+    <Compile Include="Functions\Web\QueryString.vb" />
+    <Compile Include="Functions\Web\Rss.vb" />
+    <Compile Include="Functions\Web\Postback.vb" />
+    <Compile Include="Functions\Web\User.vb" />
+    <Compile Include="Functions\Web\Url.vb" />
+    <Compile Include="Functions\Web\CurrentUser.vb" />
+    <Compile Include="Global\ConnectionStrings.vb" />
+    <Compile Include="Global\GlobalSetting.vb" />
+    <Compile Include="Javascripts\Favicon.vb" />
+    <Compile Include="Javascripts\QueryStrings.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Database\MySql\Provider\Membership.vb" />
+    <Compile Include="Database\MySql\Provider\Table\Applications.vb" />
+    <Compile Include="Database\MySql\Provider\Table\UsersPosition.vb" />
+    <Compile Include="Database\MySql\Provider\Table\OfficeUnit.vb" />
+    <Compile Include="Database\MySql\Provider\Table\OfficeDepartment.vb" />
+    <Compile Include="Database\MySql\Provider\Table\OfficeDivision.vb" />
+    <Compile Include="Database\MySql\Provider\Table\OfficeSatellite.vb" />
+    <Compile Include="Database\MySql\Provider\Table\OfficeBranch.vb" />
+    <Compile Include="Database\MySql\Provider\Table\UsersMarriage.vb" />
+    <Compile Include="Database\MySql\Provider\Table\UsersGender.vb" />
+    <Compile Include="Database\MySql\Provider\Table\UsersProfile.vb" />
+    <Compile Include="Database\MySql\Provider\Table\UsersInRoles.vb" />
+    <Compile Include="Database\MySql\Provider\Table\SessionCleanup.vb" />
+    <Compile Include="Database\MySql\Provider\Table\SchemaVersion.vb" />
+    <Compile Include="Database\MySql\Provider\Table\Roles.vb" />
+    <Compile Include="Database\MySql\Provider\Table\Membership.vb" />
+    <Compile Include="Database\MySql\Provider\Table\zTemplate.vb" />
+    <Compile Include="Database\MySql\Provider\Table\Users.vb" />
+    <Compile Include="Database\MySql\Sql\Commands.vb" />
+    <Compile Include="Database\MySql\Sql\Execute.vb" />
+    <Compile Include="Database\MySql\Sql\Simplifier.vb" />
+    <Compile Include="Database\SQLite\Provider\Table\Applications.vb" />
+    <Compile Include="Database\SQLite\Provider\Table\Roles.vb" />
+    <Compile Include="Database\SQLite\Provider\Table\UsersGender.vb" />
+    <Compile Include="Database\SQLite\Provider\Table\UsersInRoles.vb" />
+    <Compile Include="Database\SQLite\Provider\Table\UsersMarriage.vb" />
+    <Compile Include="Database\SQLite\Provider\Table\UsersProfile.vb" />
+    <Compile Include="Database\SQLite\Sql\Commands.vb" />
+    <Compile Include="Database\SQLite\Sql\Execute.vb" />
+    <Compile Include="Database\SQLite\Sql\Simplifier.vb" />
+    <Compile Include="Functions\Net\Connection.vb" />
+    <Compile Include="Functions\Net\Port.vb" />
+    <Compile Include="Webconfig\Cryptography.vb" />
+    <Compile Include="Webconfig\ConnectionString.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Functions\Web\MyMasterPage.vb.txt" />
+    <Content Include="MySql.Data.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MySql.Data.Entity.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MySql.Web.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="NasLib.Data.SQLiteProvider.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RssToolkit.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="System.Data.SQLite.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Todo.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Functions\Files\Save\" />
+    <Folder Include="Functions\Files\Write\" />
+    <Folder Include="Igniter\Database\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

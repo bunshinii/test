@@ -1,0 +1,166 @@
+﻿/*#region Variables*/
+/*#endregion*/
+@media print {
+  .noPrint {
+    display: none;
+  }
+}
+/*#region MyMetro*/
+.mymetro {
+  width: 100%;
+}
+.mymetro .left-charm {
+  vertical-align: top;
+  width: 250px;
+  min-width: 250px;
+  border-right: 1px solid lightgray;
+}
+.mymetro .left-charm img {
+  width: 170px;
+  margin: 25px 40px;
+}
+.mymetro .workspace {
+  padding: 10px 20px;
+  vertical-align: top;
+}
+.mymetro .right-panel {
+  width: 250px;
+  vertical-align: top;
+}
+.mymetro .footer {
+  border-top: 1px solid lightgray;
+  background-color: #285395;
+  color: white;
+  text-align: center;
+}
+.mymetro .floatLeft {
+  float: left;
+}
+.mymetro .floatRight {
+  float: right;
+}
+.mymetro .noteTable table td {
+  padding: 3px;
+}
+.profile-img {
+  padding: 0;
+  margin: 3px 0 0 0;
+  height: 40px;
+}
+.notification {
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+}
+.watermark {
+  color: ButtonShadow;
+}
+.custominfo {
+  width: 100%;
+}
+.custominfo .caption {
+  width: 100px;
+}
+.custominfo .caption2 {
+  width: 120px;
+}
+.custominfo .content {
+  vertical-align: top;
+}
+.custominfo .content label {
+  margin: 0!important;
+}
+.custominfo .dropdown {
+  width: 100%;
+}
+.custominfo .padding {
+  padding: 10px;
+}
+.outerLayer {
+  background-color: rgba(0, 0, 0, 0.52);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+}
+.innerLayer {
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20%;
+  background-color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  border: 5px solid black;
+}
+/*#endregion*/
+/*#region CSS OVERRIDE*/
+/*#region Header*/
+header {
+  height: 46px;
+}
+.container {
+  width: 100% !important;
+}
+/*#endregion*/
+/*#region Navigation Bar*/
+.metro .navigation-bar.darkblue {
+  background-color: #285395;
+}
+.metro .navigation-bar.darkblue .element-menu > li > a {
+  color: #ffffff;
+}
+.metro .navigation-bar.darkblue .element:hover,
+.metro .navigation-bar.darkblue .element-menu > li:hover {
+  background-color: #123789;
+}
+/*#endregion*/
+/*#region Panel*/
+.metro .rss .panel .panel-header {
+  padding: 10px;
+  background-color: #285395;
+  width: 100%;
+  font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  color: #fff;
+  letter-spacing: 0.00em;
+  font-size: 1.7rem;
+  line-height: 1.7rem;
+  cursor: default;
+}
+.metro .rss .panel .panel-header img {
+  height: 20px;
+}
+.metro .rss .panel .panel-content {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+.metro .rss .panel .warning p {
+  padding: 0 20px;
+  color: red;
+  font-size: 10pt;
+}
+/*#endregion*/
+/*#region Outlook Listview*/
+.metro .listview-outlook .list .list-content {
+  margin: 2px 0;
+  padding: 2px 5px;
+  font-size: 10px;
+}
+/*#endregion*/
+/*#region Table*/
+.metro .table tr.info td,
+.metro .table tr.warning td,
+.metro .table tr.error td,
+.metro .table tr.success td,
+.metro .table tr.info td input,
+.metro .table tr.warning td input,
+.metro .table tr.error td input,
+.metro .table tr.success td input {
+  color: darkblue!important;
+}

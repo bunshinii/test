@@ -1,0 +1,2196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{DD154111-1DAC-4104-80B4-75E50463FF40}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Rdms_Metro</RootNamespace>
+    <AssemblyName>Rdms Metro</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Rdms Metro.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Rdms Metro.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.7.607, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery, Version=1.12.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.12.4\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls, Version=1.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.Routing" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Password.aspx" />
+    <Content Include="Account\PwdReset.aspx" />
+    <Content Include="bin\MySql.Data.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\MySql.Data.Entity.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\MySql.Web.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\NasLib.Data.SQLiteProvider.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\System.Data.SQLite.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Chart.css">
+      <DependentUpon>Chart.less</DependentUpon>
+    </Content>
+    <Content Include="Content\Chart.min.css">
+      <DependentUpon>Chart.css</DependentUpon>
+    </Content>
+    <Content Include="Content\FrontPage.css">
+      <DependentUpon>FrontPage.less</DependentUpon>
+    </Content>
+    <Content Include="Content\FrontPage.min.css">
+      <DependentUpon>FrontPage.css</DependentUpon>
+    </Content>
+    <Content Include="Content\NoPrint.css">
+      <DependentUpon>NoPrint.less</DependentUpon>
+    </Content>
+    <Content Include="Content\NoPrint.min.css">
+      <DependentUpon>NoPrint.css</DependentUpon>
+    </Content>
+    <Content Include="Images\apple-touch-icon-57x57.png" />
+    <Content Include="Images\apple-touch-icon-60x60.png" />
+    <Content Include="Images\apple-touch-icon-72x72.png" />
+    <Content Include="Images\apple-touch-icon-76x76.png" />
+    <Content Include="Images\apple-touch-icon-precomposed.png" />
+    <Content Include="Images\apple-touch-icon.png" />
+    <Content Include="Images\browserconfig.xml" />
+    <Content Include="Images\ChartTemp\banner-logo2013.png" />
+    <Content Include="Images\favicon-16x16.png" />
+    <Content Include="Images\favicon-196x196.png" />
+    <Content Include="Images\favicon-32x32.png" />
+    <Content Include="Images\favicon.ico" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\mstile-150x150.png" />
+    <Content Include="Images\mstile-310x150.png" />
+    <Content Include="Images\mstile-70x70.png" />
+    <Content Include="Images\rdms-tile.png" />
+    <Content Include="Images\rdms_light.png" />
+    <Content Include="MyControls\MetroUI\Buttons\Breadcrumbs\Breadcrumb.ascx" />
+    <Content Include="MyControls\MetroUI\Buttons\Breadcrumbs\Item.ascx" />
+    <Content Include="MyControls\MetroUI\FluentMenu\ContainerCustom.ascx" />
+    <Content Include="MyControls\MetroUI\FluentMenu\TabPanelGroup\PatronInfoCustom.ascx" />
+    <Content Include="MyControls\Rdms\Admin\UserEditor.ascx" />
+    <Content Include="MyControls\Rdms\Admin\UserSearchInternal\Container.ascx" />
+    <Content Include="MyControls\Rdms\Announcement\AllEditor.ascx" />
+    <Content Include="MyControls\Rdms\Announcement\BranchEditor.ascx" />
+    <Content Include="MyControls\Rdms\Announcement\SatelliteEditor.ascx" />
+    <Content Include="MyControls\Rdms\Charts\ByMonthWeekly.ascx" />
+    <Content Include="MyControls\Rdms\Charts\ByYearMonthly.ascx" />
+    <Content Include="MyControls\Rdms\Charts\ByYearHourly.ascx" />
+    <Content Include="MyControls\Rdms\Charts\ByMonthHourly.ascx" />
+    <Content Include="MyControls\Rdms\Charts\ByDayHourly.ascx" />
+    <Content Include="MyControls\Rdms\DutyCalendar\DutyLegend.ascx" />
+    <Content Include="MyControls\Rdms\DutyCalendar\DutyTypeButton.ascx" />
+    <Content Include="MyControls\Rdms\DutyCalendar\DutyTypeNote\DutyTypeNotes.ascx" />
+    <Content Include="MyControls\Rdms\DutyCalendar\DutyTypeNote\Item.ascx" />
+    <Content Include="MyControls\Rdms\DutyCalendar\TodayContainer.ascx" />
+    <Content Include="MyControls\Rdms\Reports\DailyOption.ascx" />
+    <Content Include="MyControls\Rdms\Reports\MessageGeneratorDaily.ascx" />
+    <Content Include="MyControls\Rdms\Reports\MessageGeneratorMonthly.ascx" />
+    <Content Include="MyControls\Rdms\Reports\MessageGeneratorYearly.ascx" />
+    <Content Include="MyControls\Rdms\Reports\MonthlyOption.ascx" />
+    <Content Include="MyControls\Rdms\Reports\ReportsGridView.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Daily\ByBranch.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Daily\ByCampus.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Daily\ByDepartment.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Daily\ByDivision.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Daily\ByFaculty.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Daily\ByOfficer.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Daily\ByPatron.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Daily\ByProgramme.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Daily\BySatellite.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Daily\ByStaffDepartment.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Daily\ByStaffType.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Daily\ByStudLevel.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Daily\ByStudMode.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Daily\ByUnit.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Monthly\ByBranch.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Monthly\ByCampus.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Monthly\ByDepartment.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Monthly\ByDivision.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Monthly\ByFaculty.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Monthly\ByOfficer.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Monthly\ByPatron.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Monthly\ByProgramme.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Monthly\BySatellite.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Monthly\ByStaffDepartment.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Monthly\ByStaffType.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Monthly\ByStudLevel.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Monthly\ByStudMode.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Monthly\ByUnit.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Yearly\ByBranch.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Yearly\ByCampus.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Yearly\ByDepartment.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Yearly\ByDivision.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Yearly\ByFaculty.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Yearly\ByOfficer.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Yearly\ByPatron.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Yearly\ByProgramme.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Yearly\BySatellite.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Yearly\ByStaffDepartment.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Yearly\ByStaffType.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Yearly\ByStudLevel.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Yearly\ByStudMode.ascx" />
+    <Content Include="MyControls\Rdms\Reports\Statistics\Yearly\ByUnit.ascx" />
+    <Content Include="MyControls\Rdms\Reports\YearlyOption.ascx" />
+    <Content Include="MyControls\Rdms\Tables\Log\Container.ascx" />
+    <Content Include="MyControls\Rdms\Tables\Log\RowItem.ascx" />
+    <Content Include="MyControls\Rdms\Tables\Snippet\Container.ascx" />
+    <Content Include="MyControls\Rdms\Tables\Snippet\RowItem.ascx" />
+    <Content Include="MyControls\Rdms\Tables\Unit\Container.ascx" />
+    <Content Include="MyControls\Rdms\Tables\Unit\RowItem.ascx" />
+    <Content Include="MyControls\Rdms\Tables\Division\Container.ascx" />
+    <Content Include="MyControls\Rdms\Tables\Division\RowItem.ascx" />
+    <Content Include="MyControls\Rdms\Tables\Department\Container.ascx" />
+    <Content Include="MyControls\Rdms\Tables\Department\RowItem.ascx" />
+    <Content Include="MyControls\Rdms\Tables\Satellite\Container.ascx" />
+    <Content Include="MyControls\Rdms\Tables\Satellite\RowItem.ascx" />
+    <Content Include="MyControls\Rdms\Tables\Branch\Container.ascx" />
+    <Content Include="MyControls\Rdms\Tables\Branch\RowItem.ascx" />
+    <Content Include="MyControls\Rdms\User\Dashboard\Panel\Announcement.ascx" />
+    <Content Include="MyControls\Rdms\User\DutyLegend.ascx" />
+    <Content Include="MyControls\Rdms\Tables\Notification\Container.ascx" />
+    <Content Include="MyControls\Rdms\Tables\Notification\RowItem.ascx" />
+    <Content Include="MyControls\Rdms\User\Dashboard\Panel\DutyChangeRequest.ascx" />
+    <Content Include="MyControls\Rdms\User\Dashboard\Panel\Notification.ascx" />
+    <Content Include="MyControls\Rdms\User\Picture.ascx" />
+    <Content Include="Pages\Admin\Application\Announcement\AllEdit.aspx" />
+    <Content Include="Pages\Admin\Application\Announcement\Announcement.aspx" />
+    <Content Include="Pages\Admin\Application\Announcement\BranchEdit.aspx" />
+    <Content Include="Pages\Admin\Application\Announcement\SatelliteEdit.aspx" />
+    <Content Include="Pages\Admin\Application\RssReader.aspx" />
+    <Content Include="Pages\Admin\CodeTemplates.aspx" />
+    <Content Include="Pages\Admin\Default.aspx" />
+    <Content Include="Pages\Admin\DutyAdd.aspx" />
+    <Content Include="Pages\Admin\DutyAddProcess.aspx" />
+    <Content Include="Pages\Admin\DutyRemoveProcess.aspx" />
+    <Content Include="Pages\Admin\DutySearch.aspx" />
+    <Content Include="Pages\Admin\Organization\Branch.aspx" />
+    <Content Include="Pages\Admin\Organization\Default.aspx" />
+    <Content Include="Pages\Admin\Organization\Department.aspx" />
+    <Content Include="Pages\Admin\Organization\Division.aspx" />
+    <Content Include="Pages\Admin\Organization\Satellite.aspx" />
+    <Content Include="Pages\Admin\Organization\Unit.aspx" />
+    <Content Include="Pages\Admin\UserEditor.aspx" />
+    <Content Include="Pages\Admin\UserSearchInternal.aspx" />
+    <Content Include="Pages\User\Chart\Daily.aspx" />
+    <Content Include="Pages\User\Chart\Default.aspx" />
+    <Content Include="Pages\User\Chart\Monthly.aspx" />
+    <Content Include="Pages\User\Chart\Yearly.aspx" />
+    <Content Include="Pages\User\Default.aspx" />
+    <Content Include="Pages\User\Listing\Daily.aspx" />
+    <Content Include="Pages\User\Listing\Monthly.aspx" />
+    <Content Include="Pages\User\Listing\Yearly.aspx" />
+    <Content Include="Pages\User\PatronCheckInCustom.aspx" />
+    <Content Include="Pages\User\Snippet.aspx" />
+    <Content Include="Pages\User\Statistic\Daily.aspx" />
+    <Content Include="Pages\User\Statistic\Default.aspx" />
+    <Content Include="Pages\User\Statistic\Monthly.aspx" />
+    <Content Include="Pages\User\Statistic\Yearly.aspx" />
+    <Content Include="Pages\User\UserEditor.aspx" />
+    <Content Include="Pages\User\ViewLog.aspx" />
+    <Content Include="Pages\User\WorkLog.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="Content\Calendar.css">
+      <DependentUpon>Calendar.less</DependentUpon>
+    </Content>
+    <Content Include="Content\Calendar.min.css">
+      <DependentUpon>Calendar.css</DependentUpon>
+    </Content>
+    <Content Include="Content\CheckIn.css">
+      <DependentUpon>CheckIn.less</DependentUpon>
+    </Content>
+    <Content Include="Content\CheckIn.min.css">
+      <DependentUpon>CheckIn.css</DependentUpon>
+    </Content>
+    <Content Include="Content\DataTable.css">
+      <DependentUpon>DataTable.less</DependentUpon>
+    </Content>
+    <Content Include="Content\DataTable.min.css">
+      <DependentUpon>DataTable.css</DependentUpon>
+    </Content>
+    <Content Include="Content\DutyCalendar.css">
+      <DependentUpon>DutyCalendar.less</DependentUpon>
+    </Content>
+    <Content Include="Content\DutyCalendar.min.css">
+      <DependentUpon>DutyCalendar.css</DependentUpon>
+    </Content>
+    <Content Include="Content\Forms.css">
+      <DependentUpon>Forms.less</DependentUpon>
+    </Content>
+    <Content Include="Content\Forms.min.css">
+      <DependentUpon>Forms.css</DependentUpon>
+    </Content>
+    <Content Include="Content\mymetro.css">
+      <DependentUpon>mymetro.less</DependentUpon>
+    </Content>
+    <Content Include="Content\mymetro.min.css">
+      <DependentUpon>mymetro.css</DependentUpon>
+    </Content>
+    <Content Include="Content\Profile.css">
+      <DependentUpon>Profile.less</DependentUpon>
+    </Content>
+    <Content Include="Content\Profile.min.css">
+      <DependentUpon>Profile.css</DependentUpon>
+    </Content>
+    <Content Include="Content\themes\metro\css\docs.css" />
+    <Content Include="Content\themes\metro\css\iconFont.css" />
+    <Content Include="Content\themes\metro\css\metro-bootstrap-responsive.css" />
+    <Content Include="Content\themes\metro\css\metro-bootstrap.css" />
+    <Content Include="Content\themes\metro\data\dataTables-objects.txt" />
+    <Content Include="Content\themes\metro\fonts\iconFont.dev.svg" />
+    <Content Include="Content\themes\metro\fonts\iconFont.svg" />
+    <Content Include="Content\themes\metro\fonts\metroSysIcons.svg" />
+    <Content Include="Content\themes\metro\js\docs.js" />
+    <Content Include="Content\themes\metro\js\github.info.js" />
+    <Content Include="Content\themes\metro\js\hitua.js" />
+    <Content Include="Content\themes\metro\js\holder\holder.js" />
+    <Content Include="Content\themes\metro\js\jquery\jquery.dataTables.js" />
+    <Content Include="Content\themes\metro\js\jquery\jquery.easing.1.3.min.js" />
+    <Content Include="Content\themes\metro\js\jquery\jquery.min.js" />
+    <Content Include="Content\themes\metro\js\jquery\jquery.mousewheel.js" />
+    <Content Include="Content\themes\metro\js\jquery\jquery.widget.min.js" />
+    <Content Include="Content\themes\metro\js\load-metro.js" />
+    <Content Include="Content\themes\metro\js\metro.min.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-accordion.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-button-set.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-calendar.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-carousel.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-core.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-countdown.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-date-format.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-datepicker.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-dialog.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-drag-tile.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-dropdown.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-fluentmenu.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-global.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-hint.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-initiator.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-input-control.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-listview.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-live-tile.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-loader.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-locale.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-notify.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-panel.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-plugin-template.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-progressbar.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-pull.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-rating.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-scroll.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-slider.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-stepper.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-streamer.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-tab-control.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-table.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-tile-transform.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-times.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-touch-handler.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-treeview.js" />
+    <Content Include="Content\themes\metro\js\metro\metro-wizard.js" />
+    <Content Include="Content\themes\metro\js\prettify\lang-apollo.js" />
+    <Content Include="Content\themes\metro\js\prettify\lang-basic.js" />
+    <Content Include="Content\themes\metro\js\prettify\lang-clj.js" />
+    <Content Include="Content\themes\metro\js\prettify\lang-css.js" />
+    <Content Include="Content\themes\metro\js\prettify\lang-dart.js" />
+    <Content Include="Content\themes\metro\js\prettify\lang-erlang.js" />
+    <Content Include="Content\themes\metro\js\prettify\lang-go.js" />
+    <Content Include="Content\themes\metro\js\prettify\lang-hs.js" />
+    <Content Include="Content\themes\metro\js\prettify\lang-lisp.js" />
+    <Content Include="Content\themes\metro\js\prettify\lang-llvm.js" />
+    <Content Include="Content\themes\metro\js\prettify\lang-lua.js" />
+    <Content Include="Content\themes\metro\js\prettify\lang-matlab.js" />
+    <Content Include="Content\themes\metro\js\prettify\lang-ml.js" />
+    <Content Include="Content\themes\metro\js\prettify\lang-mumps.js" />
+    <Content Include="Content\themes\metro\js\prettify\lang-n.js" />
+    <Content Include="Content\themes\metro\js\prettify\lang-pascal.js" />
+    <Content Include="Content\themes\metro\js\prettify\lang-proto.js" />
+    <Content Include="Content\themes\metro\js\prettify\lang-r.js" />
+    <Content Include="Content\themes\metro\js\prettify\lang-rd.js" />
+    <Content Include="Content\themes\metro\js\prettify\lang-scala.js" />
+    <Content Include="Content\themes\metro\js\prettify\lang-sql.js" />
+    <Content Include="Content\themes\metro\js\prettify\lang-tcl.js" />
+    <Content Include="Content\themes\metro\js\prettify\lang-tex.js" />
+    <Content Include="Content\themes\metro\js\prettify\lang-vb.js" />
+    <Content Include="Content\themes\metro\js\prettify\lang-vhdl.js" />
+    <Content Include="Content\themes\metro\js\prettify\lang-wiki.js" />
+    <Content Include="Content\themes\metro\js\prettify\lang-xq.js" />
+    <Content Include="Content\themes\metro\js\prettify\lang-yaml.js" />
+    <Content Include="Content\themes\metro\js\prettify\prettify.css" />
+    <Content Include="Content\themes\metro\js\prettify\prettify.js" />
+    <Content Include="Content\themes\metro\js\prettify\run_prettify.js" />
+    <Content Include="Content\themes\metro\js\start-screen.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\banner-logo2013.png" />
+    <Content Include="Images\rdms_dark.png" />
+    <Content Include="Images\rss.png" />
+    <Content Include="Images\UiTM.jpg" />
+    <Content Include="Images\UserDefault.jpg" />
+    <Content Include="MyControls\MetroUI\FluentMenu\Container.ascx" />
+    <Content Include="MyControls\MetroUI\FluentMenu\ContainerEditor.ascx" />
+    <Content Include="MyControls\MetroUI\FluentMenu\TabContentSegment\CheckinEnquiry.ascx" />
+    <Content Include="MyControls\MetroUI\FluentMenu\TabContentSegment\CheckinItems\EnquiryItem.ascx" />
+    <Content Include="MyControls\MetroUI\FluentMenu\TabContentSegment\CheckinItems\SubjectItem.ascx" />
+    <Content Include="MyControls\MetroUI\FluentMenu\TabContentSegment\CheckinMedium.ascx" />
+    <Content Include="MyControls\MetroUI\FluentMenu\TabContentSegment\CheckinSubject.ascx" />
+    <Content Include="MyControls\MetroUI\FluentMenu\TabContentSegment\SegmentItems\Link.ascx" />
+    <Content Include="MyControls\MetroUI\FluentMenu\TabContentSegment\SessionInfoEditor.ascx" />
+    <Content Include="MyControls\MetroUI\FluentMenu\TabPanelGroup\CheckinInfo.ascx" />
+    <Content Include="MyControls\MetroUI\FluentMenu\TabPanelGroup\OfficerInfo.ascx" />
+    <Content Include="MyControls\MetroUI\FluentMenu\TabContentSegment\PatronContact.ascx" />
+    <Content Include="MyControls\MetroUI\FluentMenu\TabPanelGroup\PatronInfo.ascx" />
+    <Content Include="MyControls\MetroUI\FluentMenu\TabContentSegment\PatronPhoto.ascx" />
+    <Content Include="MyControls\MetroUI\FluentMenu\TabContentSegment\SessionInfo.ascx" />
+    <Content Include="MyControls\MetroUI\FluentMenu\TabPanelGroup\QuickAccess.ascx" />
+    <Content Include="MyControls\MetroUI\FluentMenu\TabPanelGroup\Snippet.ascx" />
+    <Content Include="MyControls\MetroUI\Footer.ascx" />
+    <Content Include="MyControls\MetroUI\Header.ascx" />
+    <Content Include="MyControls\MetroUI\Icons.ascx" />
+    <Content Include="MyControls\MetroUI\ListView\OutlookStyle\Item.ascx" />
+    <Content Include="MyControls\MetroUI\ListView\OutlookStyle\SimpleContainer.ascx" />
+    <Content Include="MyControls\MetroUI\Panel.ascx" />
+    <Content Include="MyControls\Rdms\Admin\UserSearchDBLibrary\Container.ascx" />
+    <Content Include="MyControls\Rdms\Admin\UserSearchDBLibrary\Item.ascx" />
+    <Content Include="MyControls\Rdms\Announcement\All.ascx" />
+    <Content Include="MyControls\Rdms\Announcement\Branch.ascx" />
+    <Content Include="MyControls\Rdms\Announcement\Satellite.ascx" />
+    <Content Include="MyControls\Rdms\DutyCalendar\Monthly\Container.ascx" />
+    <Content Include="MyControls\Rdms\DutyCalendar\Monthly\Item.ascx" />
+    <Content Include="MyControls\Rdms\DutyCalendar\Monthly\Legend.ascx" />
+    <Content Include="MyControls\Rdms\DutyCalendar\Monthly\SubItem.ascx" />
+    <Content Include="MyControls\Rdms\DutyCalendar\OnDateContainer.ascx" />
+    <Content Include="MyControls\Rdms\DutyCalendar\Staff.ascx" />
+    <Content Include="MyControls\Rdms\LeftCharm\AdminMenu.ascx" />
+    <Content Include="MyControls\Rdms\LeftCharm\Container.ascx" />
+    <Content Include="MyControls\Rdms\LeftCharm\UserMenu.ascx" />
+    <Content Include="MyControls\Rdms\Login\Register.ascx" />
+    <Content Include="MyControls\Rdms\Login\Small.ascx" />
+    <Content Include="MyControls\Rdms\Organization\BranchList\Container.ascx" />
+    <Content Include="MyControls\Rdms\Organization\BranchList\Item.ascx" />
+    <Content Include="MyControls\Rdms\Organization\SatelliteList\Item.ascx" />
+    <Content Include="MyControls\Rdms\Profile\Container.ascx" />
+    <Content Include="MyControls\Rdms\Tables\DutyCalendar\Container.ascx" />
+    <Content Include="MyControls\Rdms\Tables\DutyCalendar\DutyLegendItem.ascx" />
+    <Content Include="MyControls\Rdms\Tables\DutyCalendar\RowItem.ascx" />
+    <Content Include="MyControls\Rdms\Tables\EditCheckedIn\Container.ascx" />
+    <Content Include="MyControls\Rdms\Tables\EditCheckedIn\RowItem.ascx" />
+    <Content Include="MyControls\Rdms\User\DutyRequest\DutyItem.ascx" />
+    <Content Include="MyControls\Rdms\User\DutyRequest\Legend.ascx" />
+    <Content Include="MyControls\Rdms\User\Search.ascx" />
+    <Content Include="MyControls\Rdms\User\CheckIn\Search\Container.ascx" />
+    <Content Include="MyControls\Rdms\User\CheckIn\Search\Item.ascx" />
+    <Content Include="MyControls\Rdms\User\Staff.ascx" />
+    <Content Include="Masters\MetroUI.Master" />
+    <Content Include="Content\themes\metro\fonts\iconFont.eot" />
+    <Content Include="Content\themes\metro\fonts\iconFont.json" />
+    <Content Include="Content\themes\metro\fonts\iconFont.ttf" />
+    <Content Include="Content\themes\metro\fonts\iconFont.woff" />
+    <Content Include="Content\themes\metro\fonts\metroSysIcons.ttf" />
+    <Content Include="Content\themes\metro\fonts\metroSysIcons.woff" />
+    <Content Include="Content\themes\metro\js\metro\README.md" />
+    <Content Include="Content\mymetro.less" />
+    <Content Include="App_Data\config.db" />
+    <Content Include="Content\DutyCalendar.less" />
+    <Content Include="Content\Calendar.less" />
+    <Content Include="Content\Profile.less" />
+    <Content Include="Content\CheckIn.less" />
+    <Content Include="Masters\Blank.Master" />
+    <Content Include="Masters\MetroUINoSide.Master" />
+    <Content Include="Content\DataTable.less" />
+    <Content Include="Content\Forms.less" />
+    <Content Include="Masters\MetroUIBox.Master" />
+    <None Include="Scripts\jquery-1.12.4.intellisense.js" />
+    <Content Include="Scripts\jquery-1.12.4.js" />
+    <Content Include="Scripts\jquery-1.12.4.min.js" />
+    <Content Include="Updates\UpdateCheck.aspx" />
+    <Content Include="WebForm1.aspx" />
+    <Content Include="WebForm2.aspx" />
+    <Content Include="Content\NoPrint.less" />
+    <Content Include="Content\Chart.less" />
+    <Content Include="Content\FrontPage.less" />
+    <Content Include="ClassDiagram1.cd" />
+    <None Include="compilerconfig.json" />
+    <Content Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </Content>
+    <Content Include="Pages\Admin\UserRegister.aspx" />
+    <Content Include="Pages\Admin\UserSearch.aspx" />
+    <Content Include="Pages\User\DashBoard.aspx" />
+    <Content Include="Pages\User\Duty.aspx" />
+    <Content Include="Pages\User\DutyAccept.aspx" />
+    <Content Include="Pages\User\DutyChange.aspx" />
+    <Content Include="Pages\User\DutyChangeProcess.aspx" />
+    <Content Include="Pages\User\EditKiv.aspx" />
+    <Content Include="Pages\User\EditQuestion.aspx" />
+    <Content Include="Pages\User\SuccessCheckIn.aspx" />
+    <Content Include="Pages\User\Web.config" />
+    <Content Include="Pages\Admin\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="My Project\PublishProfiles\Debug_On_Server.pubxml" />
+    <None Include="My Project\PublishProfiles\Publish_On_Server.pubxml" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-1.12.4.min.map" />
+    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Pages\Duty\OnDate.aspx" />
+    <Content Include="Pages\User\EditCheckedIn.aspx" />
+    <Content Include="Pages\User\PatronCheckIn.aspx" />
+    <Content Include="Pages\User\PatronSearch.aspx" />
+    <Content Include="Pages\Duty\Calendar.aspx" />
+    <Content Include="Pages\Feed.aspx" />
+    <Content Include="Pages\Profile.aspx" />
+    <Content Include="Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\_references.js" />
+    <None Include="Web.Debug On Server.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Account\Password.aspx.designer.vb">
+      <DependentUpon>Password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Password.aspx.vb">
+      <DependentUpon>Password.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Account\PwdReset.aspx.designer.vb">
+      <DependentUpon>PwdReset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\PwdReset.aspx.vb">
+      <DependentUpon>PwdReset.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Masters\MetroUIBox.Master.designer.vb">
+      <DependentUpon>MetroUIBox.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\MetroUIBox.Master.vb">
+      <DependentUpon>MetroUIBox.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\Buttons\Breadcrumbs\Breadcrumb.ascx.designer.vb">
+      <DependentUpon>Breadcrumb.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\Buttons\Breadcrumbs\Breadcrumb.ascx.vb">
+      <DependentUpon>Breadcrumb.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\Buttons\Breadcrumbs\Item.ascx.designer.vb">
+      <DependentUpon>Item.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\Buttons\Breadcrumbs\Item.ascx.vb">
+      <DependentUpon>Item.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\ContainerCustom.ascx.designer.vb">
+      <DependentUpon>ContainerCustom.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\ContainerCustom.ascx.vb">
+      <DependentUpon>ContainerCustom.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\TabPanelGroup\PatronInfoCustom.ascx.designer.vb">
+      <DependentUpon>PatronInfoCustom.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\TabPanelGroup\PatronInfoCustom.ascx.vb">
+      <DependentUpon>PatronInfoCustom.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Admin\UserEditor.ascx.designer.vb">
+      <DependentUpon>UserEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Admin\UserEditor.ascx.vb">
+      <DependentUpon>UserEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Admin\UserSearchInternal\Container.ascx.designer.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Admin\UserSearchInternal\Container.ascx.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Announcement\AllEditor.ascx.designer.vb">
+      <DependentUpon>AllEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Announcement\AllEditor.ascx.vb">
+      <DependentUpon>AllEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Announcement\BranchEditor.ascx.designer.vb">
+      <DependentUpon>BranchEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Announcement\BranchEditor.ascx.vb">
+      <DependentUpon>BranchEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Announcement\SatelliteEditor.ascx.designer.vb">
+      <DependentUpon>SatelliteEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Announcement\SatelliteEditor.ascx.vb">
+      <DependentUpon>SatelliteEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Charts\ByMonthWeekly.ascx.designer.vb">
+      <DependentUpon>ByMonthWeekly.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Charts\ByMonthWeekly.ascx.vb">
+      <DependentUpon>ByMonthWeekly.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Charts\ByYearMonthly.ascx.designer.vb">
+      <DependentUpon>ByYearMonthly.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Charts\ByYearMonthly.ascx.vb">
+      <DependentUpon>ByYearMonthly.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Charts\ByYearHourly.ascx.designer.vb">
+      <DependentUpon>ByYearHourly.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Charts\ByYearHourly.ascx.vb">
+      <DependentUpon>ByYearHourly.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Charts\ByMonthHourly.ascx.designer.vb">
+      <DependentUpon>ByMonthHourly.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Charts\ByMonthHourly.ascx.vb">
+      <DependentUpon>ByMonthHourly.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Charts\ByDayHourly.ascx.designer.vb">
+      <DependentUpon>ByDayHourly.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Charts\ByDayHourly.ascx.vb">
+      <DependentUpon>ByDayHourly.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\DutyCalendar\DutyLegend.ascx.designer.vb">
+      <DependentUpon>DutyLegend.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\DutyCalendar\DutyLegend.ascx.vb">
+      <DependentUpon>DutyLegend.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\DutyCalendar\DutyTypeButton.ascx.designer.vb">
+      <DependentUpon>DutyTypeButton.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\DutyCalendar\DutyTypeButton.ascx.vb">
+      <DependentUpon>DutyTypeButton.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\DutyCalendar\DutyTypeNote\DutyTypeNotes.ascx.designer.vb">
+      <DependentUpon>DutyTypeNotes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\DutyCalendar\DutyTypeNote\DutyTypeNotes.ascx.vb">
+      <DependentUpon>DutyTypeNotes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\DutyCalendar\DutyTypeNote\Item.ascx.designer.vb">
+      <DependentUpon>Item.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\DutyCalendar\DutyTypeNote\Item.ascx.vb">
+      <DependentUpon>Item.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\DutyCalendar\TodayContainer.ascx.designer.vb">
+      <DependentUpon>TodayContainer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\DutyCalendar\TodayContainer.ascx.vb">
+      <DependentUpon>TodayContainer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\DailyOption.ascx.designer.vb">
+      <DependentUpon>DailyOption.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\DailyOption.ascx.vb">
+      <DependentUpon>DailyOption.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\MessageGeneratorDaily.ascx.designer.vb">
+      <DependentUpon>MessageGeneratorDaily.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\MessageGeneratorDaily.ascx.vb">
+      <DependentUpon>MessageGeneratorDaily.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\MessageGeneratorMonthly.ascx.designer.vb">
+      <DependentUpon>MessageGeneratorMonthly.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\MessageGeneratorMonthly.ascx.vb">
+      <DependentUpon>MessageGeneratorMonthly.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\MessageGeneratorYearly.ascx.designer.vb">
+      <DependentUpon>MessageGeneratorYearly.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\MessageGeneratorYearly.ascx.vb">
+      <DependentUpon>MessageGeneratorYearly.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\MonthlyOption.ascx.designer.vb">
+      <DependentUpon>MonthlyOption.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\MonthlyOption.ascx.vb">
+      <DependentUpon>MonthlyOption.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\ReportsGridView.ascx.designer.vb">
+      <DependentUpon>ReportsGridView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\ReportsGridView.ascx.vb">
+      <DependentUpon>ReportsGridView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Daily\ByBranch.ascx.designer.vb">
+      <DependentUpon>ByBranch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Daily\ByBranch.ascx.vb">
+      <DependentUpon>ByBranch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Daily\ByCampus.ascx.designer.vb">
+      <DependentUpon>ByCampus.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Daily\ByCampus.ascx.vb">
+      <DependentUpon>ByCampus.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Daily\ByDepartment.ascx.designer.vb">
+      <DependentUpon>ByDepartment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Daily\ByDepartment.ascx.vb">
+      <DependentUpon>ByDepartment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Daily\ByDivision.ascx.designer.vb">
+      <DependentUpon>ByDivision.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Daily\ByDivision.ascx.vb">
+      <DependentUpon>ByDivision.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Daily\ByFaculty.ascx.designer.vb">
+      <DependentUpon>ByFaculty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Daily\ByFaculty.ascx.vb">
+      <DependentUpon>ByFaculty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Daily\ByOfficer.ascx.designer.vb">
+      <DependentUpon>ByOfficer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Daily\ByOfficer.ascx.vb">
+      <DependentUpon>ByOfficer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Daily\ByPatron.ascx.designer.vb">
+      <DependentUpon>ByPatron.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Daily\ByPatron.ascx.vb">
+      <DependentUpon>ByPatron.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Daily\ByProgramme.ascx.designer.vb">
+      <DependentUpon>ByProgramme.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Daily\ByProgramme.ascx.vb">
+      <DependentUpon>ByProgramme.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Daily\BySatellite.ascx.designer.vb">
+      <DependentUpon>BySatellite.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Daily\BySatellite.ascx.vb">
+      <DependentUpon>BySatellite.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Daily\ByStaffDepartment.ascx.designer.vb">
+      <DependentUpon>ByStaffDepartment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Daily\ByStaffDepartment.ascx.vb">
+      <DependentUpon>ByStaffDepartment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Daily\ByStaffType.ascx.designer.vb">
+      <DependentUpon>ByStaffType.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Daily\ByStaffType.ascx.vb">
+      <DependentUpon>ByStaffType.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Daily\ByStudLevel.ascx.designer.vb">
+      <DependentUpon>ByStudLevel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Daily\ByStudLevel.ascx.vb">
+      <DependentUpon>ByStudLevel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Daily\ByStudMode.ascx.designer.vb">
+      <DependentUpon>ByStudMode.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Daily\ByStudMode.ascx.vb">
+      <DependentUpon>ByStudMode.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Daily\ByUnit.ascx.designer.vb">
+      <DependentUpon>ByUnit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Daily\ByUnit.ascx.vb">
+      <DependentUpon>ByUnit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Monthly\ByBranch.ascx.designer.vb">
+      <DependentUpon>ByBranch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Monthly\ByBranch.ascx.vb">
+      <DependentUpon>ByBranch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Monthly\ByCampus.ascx.designer.vb">
+      <DependentUpon>ByCampus.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Monthly\ByCampus.ascx.vb">
+      <DependentUpon>ByCampus.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Monthly\ByDepartment.ascx.designer.vb">
+      <DependentUpon>ByDepartment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Monthly\ByDepartment.ascx.vb">
+      <DependentUpon>ByDepartment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Monthly\ByDivision.ascx.designer.vb">
+      <DependentUpon>ByDivision.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Monthly\ByDivision.ascx.vb">
+      <DependentUpon>ByDivision.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Monthly\ByFaculty.ascx.designer.vb">
+      <DependentUpon>ByFaculty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Monthly\ByFaculty.ascx.vb">
+      <DependentUpon>ByFaculty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Monthly\ByOfficer.ascx.designer.vb">
+      <DependentUpon>ByOfficer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Monthly\ByOfficer.ascx.vb">
+      <DependentUpon>ByOfficer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Monthly\ByPatron.ascx.designer.vb">
+      <DependentUpon>ByPatron.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Monthly\ByPatron.ascx.vb">
+      <DependentUpon>ByPatron.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Monthly\ByProgramme.ascx.designer.vb">
+      <DependentUpon>ByProgramme.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Monthly\ByProgramme.ascx.vb">
+      <DependentUpon>ByProgramme.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Monthly\BySatellite.ascx.designer.vb">
+      <DependentUpon>BySatellite.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Monthly\BySatellite.ascx.vb">
+      <DependentUpon>BySatellite.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Monthly\ByStaffDepartment.ascx.designer.vb">
+      <DependentUpon>ByStaffDepartment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Monthly\ByStaffDepartment.ascx.vb">
+      <DependentUpon>ByStaffDepartment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Monthly\ByStaffType.ascx.designer.vb">
+      <DependentUpon>ByStaffType.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Monthly\ByStaffType.ascx.vb">
+      <DependentUpon>ByStaffType.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Monthly\ByStudLevel.ascx.designer.vb">
+      <DependentUpon>ByStudLevel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Monthly\ByStudLevel.ascx.vb">
+      <DependentUpon>ByStudLevel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Monthly\ByStudMode.ascx.designer.vb">
+      <DependentUpon>ByStudMode.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Monthly\ByStudMode.ascx.vb">
+      <DependentUpon>ByStudMode.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Monthly\ByUnit.ascx.designer.vb">
+      <DependentUpon>ByUnit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Monthly\ByUnit.ascx.vb">
+      <DependentUpon>ByUnit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Yearly\ByBranch.ascx.designer.vb">
+      <DependentUpon>ByBranch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Yearly\ByBranch.ascx.vb">
+      <DependentUpon>ByBranch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Yearly\ByCampus.ascx.designer.vb">
+      <DependentUpon>ByCampus.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Yearly\ByCampus.ascx.vb">
+      <DependentUpon>ByCampus.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Yearly\ByDepartment.ascx.designer.vb">
+      <DependentUpon>ByDepartment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Yearly\ByDepartment.ascx.vb">
+      <DependentUpon>ByDepartment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Yearly\ByDivision.ascx.designer.vb">
+      <DependentUpon>ByDivision.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Yearly\ByDivision.ascx.vb">
+      <DependentUpon>ByDivision.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Yearly\ByFaculty.ascx.designer.vb">
+      <DependentUpon>ByFaculty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Yearly\ByFaculty.ascx.vb">
+      <DependentUpon>ByFaculty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Yearly\ByOfficer.ascx.designer.vb">
+      <DependentUpon>ByOfficer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Yearly\ByOfficer.ascx.vb">
+      <DependentUpon>ByOfficer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Yearly\ByPatron.ascx.designer.vb">
+      <DependentUpon>ByPatron.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Yearly\ByPatron.ascx.vb">
+      <DependentUpon>ByPatron.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Yearly\ByProgramme.ascx.designer.vb">
+      <DependentUpon>ByProgramme.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Yearly\ByProgramme.ascx.vb">
+      <DependentUpon>ByProgramme.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Yearly\BySatellite.ascx.designer.vb">
+      <DependentUpon>BySatellite.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Yearly\BySatellite.ascx.vb">
+      <DependentUpon>BySatellite.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Yearly\ByStaffDepartment.ascx.designer.vb">
+      <DependentUpon>ByStaffDepartment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Yearly\ByStaffDepartment.ascx.vb">
+      <DependentUpon>ByStaffDepartment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Yearly\ByStaffType.ascx.designer.vb">
+      <DependentUpon>ByStaffType.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Yearly\ByStaffType.ascx.vb">
+      <DependentUpon>ByStaffType.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Yearly\ByStudLevel.ascx.designer.vb">
+      <DependentUpon>ByStudLevel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Yearly\ByStudLevel.ascx.vb">
+      <DependentUpon>ByStudLevel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Yearly\ByStudMode.ascx.designer.vb">
+      <DependentUpon>ByStudMode.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Yearly\ByStudMode.ascx.vb">
+      <DependentUpon>ByStudMode.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Yearly\ByUnit.ascx.designer.vb">
+      <DependentUpon>ByUnit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\Statistics\Yearly\ByUnit.ascx.vb">
+      <DependentUpon>ByUnit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\YearlyOption.ascx.designer.vb">
+      <DependentUpon>YearlyOption.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Reports\YearlyOption.ascx.vb">
+      <DependentUpon>YearlyOption.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\Log\Container.ascx.designer.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\Log\Container.ascx.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\Log\RowItem.ascx.designer.vb">
+      <DependentUpon>RowItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\Log\RowItem.ascx.vb">
+      <DependentUpon>RowItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\Snippet\Container.ascx.designer.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\Snippet\Container.ascx.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\Snippet\RowItem.ascx.designer.vb">
+      <DependentUpon>RowItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\Snippet\RowItem.ascx.vb">
+      <DependentUpon>RowItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\Unit\Container.ascx.designer.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\Unit\Container.ascx.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\Unit\RowItem.ascx.designer.vb">
+      <DependentUpon>RowItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\Unit\RowItem.ascx.vb">
+      <DependentUpon>RowItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\Division\Container.ascx.designer.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\Division\Container.ascx.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\Division\RowItem.ascx.designer.vb">
+      <DependentUpon>RowItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\Division\RowItem.ascx.vb">
+      <DependentUpon>RowItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\Department\Container.ascx.designer.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\Department\Container.ascx.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\Department\RowItem.ascx.designer.vb">
+      <DependentUpon>RowItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\Department\RowItem.ascx.vb">
+      <DependentUpon>RowItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\Satellite\Container.ascx.designer.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\Satellite\Container.ascx.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\Satellite\RowItem.ascx.designer.vb">
+      <DependentUpon>RowItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\Satellite\RowItem.ascx.vb">
+      <DependentUpon>RowItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\Branch\Container.ascx.designer.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\Branch\Container.ascx.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\Branch\RowItem.ascx.designer.vb">
+      <DependentUpon>RowItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\Branch\RowItem.ascx.vb">
+      <DependentUpon>RowItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\User\Dashboard\Panel\Announcement.ascx.designer.vb">
+      <DependentUpon>Announcement.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\User\Dashboard\Panel\Announcement.ascx.vb">
+      <DependentUpon>Announcement.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\User\DutyLegend.ascx.designer.vb">
+      <DependentUpon>DutyLegend.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\User\DutyLegend.ascx.vb">
+      <DependentUpon>DutyLegend.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\Notification\Container.ascx.designer.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\Notification\Container.ascx.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\Notification\RowItem.ascx.designer.vb">
+      <DependentUpon>RowItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\Notification\RowItem.ascx.vb">
+      <DependentUpon>RowItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\User\Dashboard\Panel\DutyChangeRequest.ascx.designer.vb">
+      <DependentUpon>DutyChangeRequest.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\User\Dashboard\Panel\DutyChangeRequest.ascx.vb">
+      <DependentUpon>DutyChangeRequest.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\User\Dashboard\Panel\Notification.ascx.designer.vb">
+      <DependentUpon>Notification.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\User\Dashboard\Panel\Notification.ascx.vb">
+      <DependentUpon>Notification.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\User\Picture.ascx.designer.vb">
+      <DependentUpon>Picture.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\User\Picture.ascx.vb">
+      <DependentUpon>Picture.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyModules\Database\CustomPatron.vb" />
+    <Compile Include="MyModules\Database\Notification.vb" />
+    <Compile Include="MyModules\Database\Announcement.vb" />
+    <Compile Include="MyModules\Database\RdmsLog.vb" />
+    <Compile Include="MyModules\Functions\PostBack.vb" />
+    <Compile Include="MyModules\MyMasterPage.vb" />
+    <Compile Include="MyModules\MyVariable\ApplicationLevel.vb" />
+    <Compile Include="MyModules\MyVariable\MyVariable.vb" />
+    <Compile Include="MyModules\MyVariable\QueryStringLevel.vb" />
+    <Compile Include="MyModules\MyVariable\PageLevel.vb" />
+    <Compile Include="MyModules\MyVariable\SessionLevel.vb" />
+    <Compile Include="MyModules\MyVariable\RequestLevel.vb" />
+    <Compile Include="Pages\Admin\Application\Announcement\AllEdit.aspx.designer.vb">
+      <DependentUpon>AllEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Application\Announcement\AllEdit.aspx.vb">
+      <DependentUpon>AllEdit.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Application\Announcement\Announcement.aspx.designer.vb">
+      <DependentUpon>Announcement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Application\Announcement\Announcement.aspx.vb">
+      <DependentUpon>Announcement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Application\Announcement\BranchEdit.aspx.designer.vb">
+      <DependentUpon>BranchEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Application\Announcement\BranchEdit.aspx.vb">
+      <DependentUpon>BranchEdit.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Application\Announcement\SatelliteEdit.aspx.designer.vb">
+      <DependentUpon>SatelliteEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Application\Announcement\SatelliteEdit.aspx.vb">
+      <DependentUpon>SatelliteEdit.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Application\RssReader.aspx.designer.vb">
+      <DependentUpon>RssReader.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Application\RssReader.aspx.vb">
+      <DependentUpon>RssReader.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\CodeTemplates.aspx.designer.vb">
+      <DependentUpon>CodeTemplates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\CodeTemplates.aspx.vb">
+      <DependentUpon>CodeTemplates.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\DutyAdd.aspx.designer.vb">
+      <DependentUpon>DutyAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\DutyAdd.aspx.vb">
+      <DependentUpon>DutyAdd.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\DutyAddProcess.aspx.designer.vb">
+      <DependentUpon>DutyAddProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\DutyAddProcess.aspx.vb">
+      <DependentUpon>DutyAddProcess.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\DutyRemoveProcess.aspx.designer.vb">
+      <DependentUpon>DutyRemoveProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\DutyRemoveProcess.aspx.vb">
+      <DependentUpon>DutyRemoveProcess.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\DutySearch.aspx.designer.vb">
+      <DependentUpon>DutySearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\DutySearch.aspx.vb">
+      <DependentUpon>DutySearch.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Organization\Branch.aspx.designer.vb">
+      <DependentUpon>Branch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Organization\Branch.aspx.vb">
+      <DependentUpon>Branch.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Organization\Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Organization\Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Organization\Department.aspx.designer.vb">
+      <DependentUpon>Department.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Organization\Department.aspx.vb">
+      <DependentUpon>Department.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Organization\Division.aspx.designer.vb">
+      <DependentUpon>Division.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Organization\Division.aspx.vb">
+      <DependentUpon>Division.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Organization\Satellite.aspx.designer.vb">
+      <DependentUpon>Satellite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Organization\Satellite.aspx.vb">
+      <DependentUpon>Satellite.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Organization\Unit.aspx.designer.vb">
+      <DependentUpon>Unit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Organization\Unit.aspx.vb">
+      <DependentUpon>Unit.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\UserEditor.aspx.designer.vb">
+      <DependentUpon>UserEditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\UserEditor.aspx.vb">
+      <DependentUpon>UserEditor.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\UserSearchInternal.aspx.designer.vb">
+      <DependentUpon>UserSearchInternal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\UserSearchInternal.aspx.vb">
+      <DependentUpon>UserSearchInternal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User\Chart\Daily.aspx.designer.vb">
+      <DependentUpon>Daily.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\User\Chart\Daily.aspx.vb">
+      <DependentUpon>Daily.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User\Chart\Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\User\Chart\Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User\Chart\Monthly.aspx.designer.vb">
+      <DependentUpon>Monthly.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\User\Chart\Monthly.aspx.vb">
+      <DependentUpon>Monthly.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User\Chart\Yearly.aspx.designer.vb">
+      <DependentUpon>Yearly.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\User\Chart\Yearly.aspx.vb">
+      <DependentUpon>Yearly.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User\Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\User\Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User\Listing\Daily.aspx.designer.vb">
+      <DependentUpon>Daily.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\User\Listing\Daily.aspx.vb">
+      <DependentUpon>Daily.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User\Listing\Monthly.aspx.designer.vb">
+      <DependentUpon>Monthly.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\User\Listing\Monthly.aspx.vb">
+      <DependentUpon>Monthly.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User\Listing\Yearly.aspx.designer.vb">
+      <DependentUpon>Yearly.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\User\Listing\Yearly.aspx.vb">
+      <DependentUpon>Yearly.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User\PatronCheckInCustom.aspx.designer.vb">
+      <DependentUpon>PatronCheckInCustom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\User\PatronCheckInCustom.aspx.vb">
+      <DependentUpon>PatronCheckInCustom.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User\Snippet.aspx.designer.vb">
+      <DependentUpon>Snippet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\User\Snippet.aspx.vb">
+      <DependentUpon>Snippet.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User\Statistic\Daily.aspx.designer.vb">
+      <DependentUpon>Daily.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\User\Statistic\Daily.aspx.vb">
+      <DependentUpon>Daily.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User\Statistic\Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\User\Statistic\Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User\Statistic\Monthly.aspx.designer.vb">
+      <DependentUpon>Monthly.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\User\Statistic\Monthly.aspx.vb">
+      <DependentUpon>Monthly.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User\Statistic\Yearly.aspx.designer.vb">
+      <DependentUpon>Yearly.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\User\Statistic\Yearly.aspx.vb">
+      <DependentUpon>Yearly.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User\UserEditor.aspx.designer.vb">
+      <DependentUpon>UserEditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\User\UserEditor.aspx.vb">
+      <DependentUpon>UserEditor.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User\ViewLog.aspx.designer.vb">
+      <DependentUpon>ViewLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\User\ViewLog.aspx.vb">
+      <DependentUpon>ViewLog.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User\WorkLog.aspx.designer.vb">
+      <DependentUpon>WorkLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\User\WorkLog.aspx.vb">
+      <DependentUpon>WorkLog.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.vb">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.vb">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.vb" />
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\Blank.Master.designer.vb">
+      <DependentUpon>Blank.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\Blank.Master.vb">
+      <DependentUpon>Blank.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Masters\MetroUI.Master.designer.vb">
+      <DependentUpon>MetroUI.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\MetroUI.Master.vb">
+      <DependentUpon>MetroUI.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Masters\MetroUINoSide.Master.designer.vb">
+      <DependentUpon>MetroUINoSide.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\MetroUINoSide.Master.vb">
+      <DependentUpon>MetroUINoSide.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\Container.ascx.designer.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\Container.ascx.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\ContainerEditor.ascx.designer.vb">
+      <DependentUpon>ContainerEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\ContainerEditor.ascx.vb">
+      <DependentUpon>ContainerEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\TabContentSegment\CheckinEnquiry.ascx.designer.vb">
+      <DependentUpon>CheckinEnquiry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\TabContentSegment\CheckinEnquiry.ascx.vb">
+      <DependentUpon>CheckinEnquiry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\TabContentSegment\CheckinItems\EnquiryItem.ascx.designer.vb">
+      <DependentUpon>EnquiryItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\TabContentSegment\CheckinItems\EnquiryItem.ascx.vb">
+      <DependentUpon>EnquiryItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\TabContentSegment\CheckinItems\SubjectItem.ascx.designer.vb">
+      <DependentUpon>SubjectItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\TabContentSegment\CheckinItems\SubjectItem.ascx.vb">
+      <DependentUpon>SubjectItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\TabContentSegment\CheckinMedium.ascx.designer.vb">
+      <DependentUpon>CheckinMedium.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\TabContentSegment\CheckinMedium.ascx.vb">
+      <DependentUpon>CheckinMedium.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\TabContentSegment\CheckinSubject.ascx.designer.vb">
+      <DependentUpon>CheckinSubject.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\TabContentSegment\CheckinSubject.ascx.vb">
+      <DependentUpon>CheckinSubject.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\TabContentSegment\SegmentItems\Link.ascx.designer.vb">
+      <DependentUpon>Link.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\TabContentSegment\SegmentItems\Link.ascx.vb">
+      <DependentUpon>Link.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\TabContentSegment\SessionInfoEditor.ascx.designer.vb">
+      <DependentUpon>SessionInfoEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\TabContentSegment\SessionInfoEditor.ascx.vb">
+      <DependentUpon>SessionInfoEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\TabPanelGroup\CheckinInfo.ascx.designer.vb">
+      <DependentUpon>CheckinInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\TabPanelGroup\CheckinInfo.ascx.vb">
+      <DependentUpon>CheckinInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\TabPanelGroup\OfficerInfo.ascx.designer.vb">
+      <DependentUpon>OfficerInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\TabPanelGroup\OfficerInfo.ascx.vb">
+      <DependentUpon>OfficerInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\TabContentSegment\PatronContact.ascx.designer.vb">
+      <DependentUpon>PatronContact.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\TabContentSegment\PatronContact.ascx.vb">
+      <DependentUpon>PatronContact.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\TabPanelGroup\PatronInfo.ascx.designer.vb">
+      <DependentUpon>PatronInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\TabPanelGroup\PatronInfo.ascx.vb">
+      <DependentUpon>PatronInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\TabContentSegment\PatronPhoto.ascx.designer.vb">
+      <DependentUpon>PatronPhoto.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\TabContentSegment\PatronPhoto.ascx.vb">
+      <DependentUpon>PatronPhoto.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\TabContentSegment\SessionInfo.ascx.designer.vb">
+      <DependentUpon>SessionInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\TabContentSegment\SessionInfo.ascx.vb">
+      <DependentUpon>SessionInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\TabPanelGroup\QuickAccess.ascx.designer.vb">
+      <DependentUpon>QuickAccess.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\TabPanelGroup\QuickAccess.ascx.vb">
+      <DependentUpon>QuickAccess.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\TabPanelGroup\Snippet.ascx.designer.vb">
+      <DependentUpon>Snippet.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\FluentMenu\TabPanelGroup\Snippet.ascx.vb">
+      <DependentUpon>Snippet.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\Footer.ascx.designer.vb">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\Footer.ascx.vb">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\Header.ascx.designer.vb">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\Header.ascx.vb">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\Icons.ascx.designer.vb">
+      <DependentUpon>Icons.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\Icons.ascx.vb">
+      <DependentUpon>Icons.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\ListView\OutlookStyle\Item.ascx.designer.vb">
+      <DependentUpon>Item.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\ListView\OutlookStyle\Item.ascx.vb">
+      <DependentUpon>Item.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\ListView\OutlookStyle\SimpleContainer.ascx.designer.vb">
+      <DependentUpon>SimpleContainer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\ListView\OutlookStyle\SimpleContainer.ascx.vb">
+      <DependentUpon>SimpleContainer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\Panel.ascx.designer.vb">
+      <DependentUpon>Panel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\MetroUI\Panel.ascx.vb">
+      <DependentUpon>Panel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Admin\UserSearchDBLibrary\Container.ascx.designer.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Admin\UserSearchDBLibrary\Container.ascx.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Admin\UserSearchDBLibrary\Item.ascx.designer.vb">
+      <DependentUpon>Item.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Admin\UserSearchDBLibrary\Item.ascx.vb">
+      <DependentUpon>Item.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Announcement\All.ascx.designer.vb">
+      <DependentUpon>All.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Announcement\All.ascx.vb">
+      <DependentUpon>All.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Announcement\Branch.ascx.designer.vb">
+      <DependentUpon>Branch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Announcement\Branch.ascx.vb">
+      <DependentUpon>Branch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Announcement\Satellite.ascx.designer.vb">
+      <DependentUpon>Satellite.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Announcement\Satellite.ascx.vb">
+      <DependentUpon>Satellite.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\DutyCalendar\Monthly\Container.ascx.designer.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\DutyCalendar\Monthly\Container.ascx.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\DutyCalendar\Monthly\Item.ascx.designer.vb">
+      <DependentUpon>Item.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\DutyCalendar\Monthly\Item.ascx.vb">
+      <DependentUpon>Item.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\DutyCalendar\Monthly\Legend.ascx.designer.vb">
+      <DependentUpon>Legend.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\DutyCalendar\Monthly\Legend.ascx.vb">
+      <DependentUpon>Legend.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\DutyCalendar\Monthly\SubItem.ascx.designer.vb">
+      <DependentUpon>SubItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\DutyCalendar\Monthly\SubItem.ascx.vb">
+      <DependentUpon>SubItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\DutyCalendar\OnDateContainer.ascx.designer.vb">
+      <DependentUpon>OnDateContainer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\DutyCalendar\OnDateContainer.ascx.vb">
+      <DependentUpon>OnDateContainer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\DutyCalendar\Staff.ascx.designer.vb">
+      <DependentUpon>Staff.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\DutyCalendar\Staff.ascx.vb">
+      <DependentUpon>Staff.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\LeftCharm\AdminMenu.ascx.designer.vb">
+      <DependentUpon>AdminMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\LeftCharm\AdminMenu.ascx.vb">
+      <DependentUpon>AdminMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\LeftCharm\Container.ascx.designer.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\LeftCharm\Container.ascx.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\LeftCharm\UserMenu.ascx.designer.vb">
+      <DependentUpon>UserMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\LeftCharm\UserMenu.ascx.vb">
+      <DependentUpon>UserMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Login\Register.ascx.designer.vb">
+      <DependentUpon>Register.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Login\Register.ascx.vb">
+      <DependentUpon>Register.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Login\Small.ascx.designer.vb">
+      <DependentUpon>Small.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Login\Small.ascx.vb">
+      <DependentUpon>Small.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Organization\BranchList\Container.ascx.designer.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Organization\BranchList\Container.ascx.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Organization\BranchList\Item.ascx.designer.vb">
+      <DependentUpon>Item.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Organization\BranchList\Item.ascx.vb">
+      <DependentUpon>Item.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Organization\SatelliteList\Item.ascx.designer.vb">
+      <DependentUpon>Item.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Organization\SatelliteList\Item.ascx.vb">
+      <DependentUpon>Item.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Profile\Container.ascx.designer.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Profile\Container.ascx.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\DutyCalendar\Container.ascx.designer.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\DutyCalendar\Container.ascx.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\DutyCalendar\DutyLegendItem.ascx.designer.vb">
+      <DependentUpon>DutyLegendItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\DutyCalendar\DutyLegendItem.ascx.vb">
+      <DependentUpon>DutyLegendItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\DutyCalendar\RowItem.ascx.designer.vb">
+      <DependentUpon>RowItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\DutyCalendar\RowItem.ascx.vb">
+      <DependentUpon>RowItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\EditCheckedIn\Container.ascx.designer.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\EditCheckedIn\Container.ascx.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\EditCheckedIn\RowItem.ascx.designer.vb">
+      <DependentUpon>RowItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\Tables\EditCheckedIn\RowItem.ascx.vb">
+      <DependentUpon>RowItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\User\DutyRequest\DutyItem.ascx.designer.vb">
+      <DependentUpon>DutyItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\User\DutyRequest\DutyItem.ascx.vb">
+      <DependentUpon>DutyItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\User\DutyRequest\Legend.ascx.designer.vb">
+      <DependentUpon>Legend.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\User\DutyRequest\Legend.ascx.vb">
+      <DependentUpon>Legend.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\User\Search.ascx.designer.vb">
+      <DependentUpon>Search.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\User\Search.ascx.vb">
+      <DependentUpon>Search.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\User\CheckIn\Search\Container.ascx.designer.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\User\CheckIn\Search\Container.ascx.vb">
+      <DependentUpon>Container.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\User\CheckIn\Search\Item.ascx.designer.vb">
+      <DependentUpon>Item.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\User\CheckIn\Search\Item.ascx.vb">
+      <DependentUpon>Item.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyControls\Rdms\User\Staff.ascx.designer.vb">
+      <DependentUpon>Staff.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\Rdms\User\Staff.ascx.vb">
+      <DependentUpon>Staff.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyModules\Announcement.vb" />
+    <Compile Include="MyModules\Database\DutyRequest.vb" />
+    <Compile Include="MyModules\Database\DutyType.vb" />
+    <Compile Include="MyModules\Database\DutyStaff.vb" />
+    <Compile Include="MyModules\Database\RdmsSnippets.vb" />
+    <Compile Include="MyModules\Database\RdmsQuestions.vb" />
+    <Compile Include="MyModules\Database\RdmsMedium.vb" />
+    <Compile Include="MyModules\Functions\Functions.vb" />
+    <Compile Include="MyModules\Functions\QueryString\MyRequest.vb" />
+    <Compile Include="MyModules\Functions\QueryString\MyResponse.vb" />
+    <Compile Include="MyModules\ModGlobal.vb" />
+    <Compile Include="MyModules\StaffDuty.vb" />
+    <Compile Include="Pages\Admin\UserRegister.aspx.designer.vb">
+      <DependentUpon>UserRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\UserRegister.aspx.vb">
+      <DependentUpon>UserRegister.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\UserSearch.aspx.designer.vb">
+      <DependentUpon>UserSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\UserSearch.aspx.vb">
+      <DependentUpon>UserSearch.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Duty\OnDate.aspx.designer.vb">
+      <DependentUpon>OnDate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Duty\OnDate.aspx.vb">
+      <DependentUpon>OnDate.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User\DashBoard.aspx.designer.vb">
+      <DependentUpon>DashBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\User\DashBoard.aspx.vb">
+      <DependentUpon>DashBoard.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User\Duty.aspx.designer.vb">
+      <DependentUpon>Duty.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\User\Duty.aspx.vb">
+      <DependentUpon>Duty.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User\DutyAccept.aspx.designer.vb">
+      <DependentUpon>DutyAccept.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\User\DutyAccept.aspx.vb">
+      <DependentUpon>DutyAccept.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User\DutyChange.aspx.designer.vb">
+      <DependentUpon>DutyChange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\User\DutyChange.aspx.vb">
+      <DependentUpon>DutyChange.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User\DutyChangeProcess.aspx.designer.vb">
+      <DependentUpon>DutyChangeProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\User\DutyChangeProcess.aspx.vb">
+      <DependentUpon>DutyChangeProcess.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User\EditCheckedIn.aspx.designer.vb">
+      <DependentUpon>EditCheckedIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\User\EditCheckedIn.aspx.vb">
+      <DependentUpon>EditCheckedIn.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User\EditKiv.aspx.designer.vb">
+      <DependentUpon>EditKiv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\User\EditKiv.aspx.vb">
+      <DependentUpon>EditKiv.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User\EditQuestion.aspx.designer.vb">
+      <DependentUpon>EditQuestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\User\EditQuestion.aspx.vb">
+      <DependentUpon>EditQuestion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User\PatronCheckIn.aspx.designer.vb">
+      <DependentUpon>PatronCheckIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\User\PatronCheckIn.aspx.vb">
+      <DependentUpon>PatronCheckIn.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User\PatronSearch.aspx.designer.vb">
+      <DependentUpon>PatronSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\User\PatronSearch.aspx.vb">
+      <DependentUpon>PatronSearch.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Duty\Calendar.aspx.designer.vb">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Duty\Calendar.aspx.vb">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Feed.aspx.designer.vb">
+      <DependentUpon>Feed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Feed.aspx.vb">
+      <DependentUpon>Feed.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Profile.aspx.designer.vb">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Profile.aspx.vb">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User\SuccessCheckIn.aspx.designer.vb">
+      <DependentUpon>SuccessCheckIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\User\SuccessCheckIn.aspx.vb">
+      <DependentUpon>SuccessCheckIn.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Updates\UpdateCheck.aspx.designer.vb">
+      <DependentUpon>UpdateCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Updates\UpdateCheck.aspx.vb">
+      <DependentUpon>UpdateCheck.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.vb">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.vb">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.vb">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.vb">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MyControls\Rdms\User\Notification\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NasLib\NasLib.vbproj">
+      <Project>{77b5b2e1-5538-44ed-9639-cf8bfd17a5d9}</Project>
+      <Name>NasLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug On Server|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Rdms Metro.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Rdms Metro.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Rdms Metro.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug On Server|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Rdms Metro.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>18087</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:18087/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

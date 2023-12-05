@@ -1,0 +1,75 @@
+﻿.duty-staff {
+  width: 380px;
+  padding: 0;
+  margin: 5px;
+  border: 3px solid transparent;
+  float: left;
+}
+.duty-staff:hover {
+  border: 3px solid lightgray;
+}
+.duty-staff table {
+  margin: 0;
+  width: 100%;
+  min-height: 150px;
+  background-color: white;
+  border: 1px solid lightgray;
+  color: black;
+}
+.duty-staff table .legend .dutyheader {
+  display: inline-block;
+}
+.duty-staff table .legend .dutybutton {
+  height: 25px;
+  width: 25px;
+  display: inline-block;
+  float: right;
+}
+.duty-staff table .legend .dutybutton:hover {
+  background-color: aliceblue;
+}
+.duty-staff table .legend a {
+  color: lightgray;
+}
+.duty-staff table .legend a:hover {
+  color: blue;
+}
+.duty-staff .image {
+  vertical-align: top;
+  width: 100px;
+  align-items: center;
+}
+.duty-staff img {
+  margin: 10px;
+  width: 80px;
+  height: 80px;
+}
+.duty-staff .content {
+  vertical-align: top;
+  width: 280px;
+  padding: 6px 10px 10px 10px;
+}
+.duty-staff .content .title {
+  font-weight: bolder;
+  font-size: 14pt;
+}
+.duty-staff .content .name {
+  font-weight: bold;
+  font-size: 12pt;
+}
+.duty-staff .content .position,
+.duty-staff .content .department,
+.duty-staff .content .division,
+.duty-staff .content .unit,
+.duty-staff .content .email,
+.duty-staff .content .phone {
+  font-size: 10pt;
+}
+.duty-staff .content .truncate {
+  width: 260px;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}

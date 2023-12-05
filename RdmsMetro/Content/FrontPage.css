@@ -1,0 +1,6 @@
+﻿.columning h2 {
+  -webkit-column-span: all;
+  column-span: all;
+  -webkit-column-count: 2;
+  column-count: 2;
+}

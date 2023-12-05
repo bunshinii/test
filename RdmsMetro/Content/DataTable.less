@@ -1,0 +1,74 @@
+﻿
+.nastable {
+
+    .truncate {
+        white-space: nowrap!important;
+        overflow: hidden!important;
+        -ms-text-overflow: ellipsis!important;
+        -o-text-overflow: ellipsis!important;
+        text-overflow: ellipsis!important;
+    }
+
+    table {
+
+        .no {
+            width: 25px;
+            overflow: hidden;
+        }
+
+        .fullname {
+            min-width: 200px;
+            max-width: 200px;
+            .truncate
+        }
+
+        .patronid {
+            width: 100px;
+            min-width: 100px;
+            max-width: 120px;
+        }
+
+        .medium {
+            width: 100px;
+            min-width: 100px;
+            max-width: 150px;
+            overflow: hidden;
+        }
+
+        .date {
+            width: 110px;
+            min-width: 110px;
+            max-width: 160px;
+            white-space: nowrap;
+        }
+
+        .note {
+            .mediumText;
+        }
+
+        .mediumText {
+            width: 160px;
+            min-width: 160px;
+            max-width: 200px;
+            .truncate;
+        }
+
+        .longText {
+            .fullname;
+        }
+
+        .mybutton {
+            min-width: 10px;
+            width: 10px;
+            //max-width:170px;
+            white-space: nowrap;
+            text-align: right;
+        }
+
+        .legend {
+            color: lightslategray;
+            font-size: 12px;
+        }
+    }
+
+}

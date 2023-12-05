@@ -1,0 +1,231 @@
+﻿
+/*#region Variables*/
+
+@mainThemeColor:#285395;
+@mainThemeColorHover:#123789;
+
+@leftCharmWidth:250px;
+@rightPanelWidth:250px;
+
+/*#endregion*/
+
+@media print {
+.noPrint {
+    display:none;
+  }
+}
+
+/*#region MyMetro*/
+
+.mymetro {
+    width:100%;
+
+    .left-charm {
+        
+        vertical-align:top;
+        width:@leftCharmWidth;
+        min-width:@leftCharmWidth;
+        border-right:1px solid lightgray;
+
+
+        img {
+            width:@leftCharmWidth - 80px;
+            margin:25px 40px;
+        }
+    }
+
+    .workspace {
+        //background-color:yellow;
+        padding:10px 20px;
+        vertical-align:top;
+    }
+
+    .right-panel {
+        width:@rightPanelWidth;
+        vertical-align:top;
+    }
+
+    .footer {
+        border-top:1px solid lightgray;
+        background-color:@mainThemeColor;
+        color:white;
+        text-align:center;
+    }
+
+    .floatLeft {
+        float:left;
+    }
+
+    .floatRight {
+        float:right;
+    }
+
+    .noteTable {
+        table {
+            td { 
+                padding:3px;
+            }
+        }
+    }
+    
+}
+
+.profile-img {
+    padding:0;
+    margin:3px 0 0 0;
+    height:40px;
+}
+
+.notification {
+    padding:10px;
+    color:white;
+    font-weight:bold;
+}
+
+.watermark {
+    color:ButtonShadow;
+}
+
+.custominfo {
+    width:100%;
+
+    .caption {
+        width:100px;
+    }
+
+    .caption2 {
+        width:120px;
+    }
+
+    .content {
+        vertical-align:top;
+        label {margin:0!important;}
+    }
+
+    .dropdown {
+        width:100%;
+    }
+
+    .padding {
+        padding:10px;
+    }
+
+
+}
+
+    .outerLayer {
+        background-color:rgba(0, 0, 0, 0.52);
+        top:0; 
+        bottom:0; 
+        left:0; 
+        right:0; 
+        position:fixed; 
+    }
+
+    .innerLayer {
+        width:150px;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:20%;
+        background-color:#fff;
+        padding:10px 20px;
+        text-align:center;
+        border:5px solid black;
+    }
+    
+
+
+/*#endregion*/
+
+/*#region CSS OVERRIDE*/ 
+
+/*#region Header*/ 
+header {
+    height:46px;
+}
+
+.container {
+    width: 100% !important;
+}
+
+/*#endregion*/
+
+/*#region Navigation Bar*/ 
+.metro .navigation-bar.darkblue {
+  background-color: @mainThemeColor;
+}
+.metro .navigation-bar.darkblue .element-menu > li > a {
+  color: #ffffff;
+}
+.metro .navigation-bar.darkblue .element:hover,
+.metro .navigation-bar.darkblue .element-menu > li:hover {
+  background-color: @mainThemeColorHover;
+}
+
+/*#endregion*/
+
+/*#region Panel*/ 
+.metro .rss .panel {
+
+    .panel-header {
+        padding: 10px;
+        background-color: @mainThemeColor;
+        width: 100%;
+        font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif;
+        font-weight: 300;
+        color: #fff;
+        letter-spacing: 0.00em;
+        font-size: 1.7rem;
+        line-height: 1.7rem;
+        cursor: default;
+
+        img {
+                height:20px;
+            }
+        }
+
+    .panel-content {
+        width: @rightPanelWidth;
+        white-space: nowrap;
+        overflow: hidden;
+        -ms-text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+    }
+
+    .warning p {
+        padding:0 20px;
+        color:red;
+        font-size:10pt;
+    }
+
+}
+/*#endregion*/
+
+/*#region Outlook Listview*/
+
+.metro .listview-outlook .list .list-content {
+    margin: 2px 0;
+    padding: 2px 5px;
+    font-size: 10px;
+}
+
+
+/*#endregion*/
+
+/*#region Table*/
+
+.metro .table tr.info td,
+.metro .table tr.warning td,
+.metro .table tr.error td,
+.metro .table tr.success td,
+.metro .table tr.info td input,
+.metro .table tr.warning td input,
+.metro .table tr.error td input,
+.metro .table tr.success td input {
+  color: darkblue!important;
+}
+
+/*#endregion*/
+
+/*#endregion*/
